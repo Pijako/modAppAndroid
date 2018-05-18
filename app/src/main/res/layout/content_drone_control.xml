@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="fr.thibaultpichel.drone.DroneControl"
+    tools:showIn="@layout/activity_drone_control">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <Button
+            android:id="@+id/b_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="13dp"
+            android:layout_toEndOf="@+id/b_tleft"
+            android:layout_toRightOf="@+id/b_tleft"
+            android:contentDescription="Up"
+            android:onClick="onClick"
+            android:text="UP" />
+
+        <Button
+            android:id="@+id/b_fwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/b_up"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:contentDescription="Forward"
+            android:onClick="onClick"
+            android:text="FWD" />
+
+        <Button
+            android:id="@+id/b_tleft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/b_fwd"
+            android:layout_alignBottom="@+id/b_fwd"
+            android:layout_marginEnd="19dp"
+            android:layout_marginRight="19dp"
+            android:layout_toLeftOf="@+id/b_fwd"
+            android:layout_toStartOf="@+id/b_fwd"
+            android:contentDescription="TurnLeft"
+            android:onClick="onClick"
+            android:text="TLEFT" />
+
+        <Button
+            android:id="@+id/b_tright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/b_fwd"
+            android:layout_marginEnd="28dp"
+            android:layout_marginRight="28dp"
+            android:contentDescription="TurnRight"
+            android:onClick="onClick"
+            android:text="TRIGHT" />
+
+        <Button
+            android:id="@+id/b_hover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/b_mvleft"
+            android:layout_alignBottom="@+id/b_mvleft"
+            android:layout_toEndOf="@+id/b_tleft"
+            android:layout_toRightOf="@+id/b_tleft"
+            android:contentDescription="Hover"
+            android:onClick="onClick"
+            android:text="HOVER" />
+
+        <Button
+            android:id="@+id/b_mvleft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/b_tleft"
+            android:layout_alignStart="@+id/b_tleft"
+            android:layout_below="@+id/b_tleft"
+            android:layout_marginTop="16dp"
+            android:contentDescription="MovLeft"
+            android:onClick="onClick"
+            android:text="MVLEFT" />
+
+        <Button
+            android:id="@+id/b_mvright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/b_tright"
+            android:layout_alignStart="@+id/b_tright"
+            android:layout_alignTop="@+id/b_hover"
+            android:contentDescription="MovRight"
+            android:onClick="onClick"
+            android:text="MVRIGHT" />
+
+        <Button
+            android:id="@+id/b_bwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/b_hover"
+            android:layout_alignStart="@+id/b_hover"
+            android:layout_below="@+id/b_hover"
+            android:layout_marginTop="12dp"
+            android:contentDescription="Backward"
+            android:text="BWD" />
+
+        <Button
+            android:id="@+id/b_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/b_bwd"
+            android:layout_alignStart="@+id/b_bwd"
+            android:layout_below="@+id/b_bwd"
+            android:contentDescription="Down"
+            android:onClick="onClick"
+            android:text="DOWN" />
+
+        <Button
+            android:id="@+id/b_takeoff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/b_down"
+            android:layout_alignStart="@+id/b_down"
+            android:layout_below="@+id/b_down"
+            android:layout_marginTop="33dp"
+            android:contentDescription="takeOff"
+            android:onClick="onClick"
+            android:text="TAKE OFF" />
+
+        <Button
+            android:id="@+id/b_adjust"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/b_mvleft"
+            android:layout_alignRight="@+id/b_mvleft"
+            android:layout_alignTop="@+id/b_takeoff"
+            android:contentDescription="Adjust"
+            android:onClick="onClick"
+            android:text="ADJUST" />
+
+        <Button
+            android:id="@+id/b_land"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/b_mvright"
+            android:layout_alignRight="@+id/b_mvright"
+            android:layout_alignTop="@+id/b_takeoff"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="Land"
+            android:onClick="onClick"
+            android:text="LAND" />
+
+        <Button
+            android:id="@+id/b_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/b_takeoff"
+            android:layout_alignStart="@+id/b_takeoff"
+            android:layout_below="@+id/b_takeoff"
+            android:contentDescription="End"
+            android:onClick="onClick"
+            android:text="END" />
+
+        <Button
+            android:id="@+id/b_emergency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/b_end"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="Emergency"
+            android:onClick="onClick"
+            android:text="EMERGENCY" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

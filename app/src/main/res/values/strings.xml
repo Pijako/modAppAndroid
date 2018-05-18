@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DroneRemote</string>
+    <string name="action_settings">Settings</string>
+    <string name="button_connect">connect</string>
+    <string name="title_activity_drone_control">DroneControl</string>
+    <string name="uuid">0d046699-661a-4e27-adf9-fec2ae1f352a</string>
+</resources>

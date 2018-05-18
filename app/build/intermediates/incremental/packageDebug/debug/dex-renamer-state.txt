@@ -1,0 +1,4 @@
+#Fri May 18 17:58:11 CEST 2018
+base.0=/home/tpichel/AndroidStudioProjects/Drone/app/build/intermediates/transforms/dexMerger/debug/38
+path.0=classes.dex
+renamed.0=classes.dex
