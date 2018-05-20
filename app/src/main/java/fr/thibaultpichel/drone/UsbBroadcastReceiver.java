@@ -52,16 +52,12 @@ public class UsbBroadcastReceiver extends BroadcastReceiver {
         }
     }
 
-    public static UsbBroadcastReceiver getInstance(UsbManager usbMan) {
+    public static UsbBroadcastReceiver getInstance() {
 
         //premiere fois on crée la class
         if (compteur == 0) {
             receiver = new UsbBroadcastReceiver();
             compteur++;
-        } else {
-            //pour les autres fois, on initie la variable
-            UsbBroadcastReceiver.usbMan = usbMan;
-
         }
 
         return receiver;
@@ -69,7 +65,7 @@ public class UsbBroadcastReceiver extends BroadcastReceiver {
 
     public void sendToAccessory(final String message) throws IOException {
 
-        Log.d("USB", "Writing datahhhhhh: " + message);
+        Log.d("USB", "Writing data: " + message);
         if (mFileDescriptor != null) {
             new Thread(new Runnable() {
                 public void run() {

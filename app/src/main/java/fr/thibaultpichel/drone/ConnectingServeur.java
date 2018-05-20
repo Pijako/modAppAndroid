@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
+import java.io.IOException;
 import java.util.Set;
 import java.util.UUID;
 
@@ -43,11 +44,12 @@ public class ConnectingServeur extends AppCompatActivity {
         setContentView(R.layout.activity_connecting_serveur);
         Log.d("Server", "Activité lancée");
         boolean enabled = true;
-        this.handler = new Handler(){
+        this.handler = new Handler() {
             @Override
             public void handleMessage(Message msg) {
                 ((TextView) findViewById(R.id.textView8)).setText("Réception Commandes");
                 ((TextView) findViewById(R.id.textView7)).setText(msg.obj.toString());
+                sendByUsb(msg.obj.toString());
             }
         };
 
@@ -73,7 +75,7 @@ public class ConnectingServeur extends AppCompatActivity {
 
             Set<BluetoothDevice> pairedDevices = mBluetoothAdapter.getBondedDevices();
 
-            if(!enabled){
+            if (!enabled) {
                 IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_FOUND);
                 registerReceiver(mReceiver, filter);
 
@@ -81,7 +83,7 @@ public class ConnectingServeur extends AppCompatActivity {
 
                     pairedDevices = mBluetoothAdapter.getBondedDevices();
 
-                }while(pairedDevices.size() == 0);
+                } while (pairedDevices.size() == 0);
             }
 
             if (pairedDevices.size() > 0) {
@@ -112,6 +114,42 @@ public class ConnectingServeur extends AppCompatActivity {
 
             }
 
+        }
+    }
+
+    public void sendByUsb(String msg) {
+        UsbBroadcastReceiver usbBroadcastReceiver = UsbBroadcastReceiver.getInstance();
+        Log.d("USB sending", msg);
+        if (msg.equals("takeOff")) {
+
+            try {
+                usbBroadcastReceiver.sendToAccessory("Adjust");
+                usbBroadcastReceiver.sendToAccessory("Adjust");
+                usbBroadcastReceiver.sendToAccessory("Adjust");
+                usbBroadcastReceiver.sendToAccessory("Adjust");
+                usbBroadcastReceiver.sendToAccessory("Adjust");
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+        } else if (msg.equals("Forward")) {
+            try {
+                usbBroadcastReceiver.sendToAccessory("CalibrateMagneto");
+                usbBroadcastReceiver.sendToAccessory("CalibrateMagneto");
+                usbBroadcastReceiver.sendToAccessory("CalibrateMagneto");
+                usbBroadcastReceiver.sendToAccessory("CalibrateMagneto");
+                usbBroadcastReceiver.sendToAccessory("CalibrateMagneto");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+        try {
+            usbBroadcastReceiver.sendToAccessory(msg);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

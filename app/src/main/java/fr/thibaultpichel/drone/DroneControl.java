@@ -39,7 +39,7 @@ public class DroneControl extends AppCompatActivity {
 
     public void onClick(View v) throws IOException {
         Button b_clique = (Button) findViewById(v.getId());
-        UsbBroadcastReceiver usbBroadcastReceiver = UsbBroadcastReceiver.getInstance(UsbBroadcastReceiver.getUsbMan());
+        UsbBroadcastReceiver usbBroadcastReceiver = UsbBroadcastReceiver.getInstance();
 
         if(b_clique.getContentDescription().equals("takeOff")){
 

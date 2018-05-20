@@ -1,20 +1,15 @@
 package fr.thibaultpichel.drone;
 
 import android.bluetooth.BluetoothSocket;
-import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.PrintWriter;
-import java.io.StringBufferInputStream;
-import java.io.StringReader;
-import java.nio.charset.StandardCharsets;
 
 /**
  * Created by tpichel on 18/05/18.
@@ -46,7 +41,7 @@ public class MyBluetoothService {
     public void getRunCT(){
         this.ct.run();
     }
-    public void getWriteCT(String message){
+    public void sendCommand(String message){
         this.ct.write(message);
     }
 
@@ -82,13 +77,6 @@ public class MyBluetoothService {
             Log.d("Server - Run", "début attente message");
             while (true) {
                 try {
-                    // Read from the InputStream.
-                    //numBytes = mmInStream.read(mmBuffer);
-                    // Send the obtained bytes to the UI activity.
-                    /*
-                    Message readMsg = mHandler.obtainMessage(
-                            MessageConstants.MESSAGE_READ, numBytes, -1,
-                            mmBuffer);*/
 
                     String receivedMessage = reader.readLine();
                     Log.d("Server - Rcv Message", receivedMessage);
@@ -96,7 +84,6 @@ public class MyBluetoothService {
                     msgForA.obj = receivedMessage;
                     MyBluetoothService.this.mHandler.sendMessage(msgForA);
 
-                    //readMsg.sendToTarget();
                 } catch (IOException e) {
                     Log.d(TAG, "Input stream was disconnected", e);
                     break;
@@ -107,30 +94,9 @@ public class MyBluetoothService {
         // Call this from the main activity to send data to the remote device.
         public void write(String message) {
             Log.d("Client - write", "début envoie");
-            //try {
-                /*mmOutStream.write(bytes);
-
-                // Share the sent message with the UI activity.
-
-                Message writtenMsg = mHandler.obtainMessage(
-                        MessageConstants.MESSAGE_WRITE, -1, -1, mmBuffer);
-                writtenMsg.sendToTarget();*/
-                writer.println(message);/*
-            } catch (IOException e) {
-                Log.e(TAG, "Error occurred when sending data", e);
-
-                // Send a failure message back to the activity.
-                Message writeErrorMsg =
-                        mHandler.obtainMessage(MessageConstants.MESSAGE_TOAST);
-                Bundle bundle = new Bundle();
-                bundle.putString("toast",
-                        "Couldn't send data to the other device");
-                writeErrorMsg.setData(bundle);
-                mHandler.sendMessage(writeErrorMsg);
-            }*/
+            writer.println(message);
         }
 
-        // Call this method from the main activity to shut down the connection.
         public void cancel() {
             try {
                 mmSocket.close();

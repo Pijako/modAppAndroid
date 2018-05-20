@@ -108,6 +108,7 @@
             android:layout_below="@+id/b_hover"
             android:layout_marginTop="12dp"
             android:contentDescription="Backward"
+            android:onClick="onClick"
             android:text="BWD" />
 
         <Button
