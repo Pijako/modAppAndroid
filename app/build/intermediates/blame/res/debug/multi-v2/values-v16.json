@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/tpichel/AndroidStudioProjects/Drone/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "outputFile": "/Users/pitch/StudioProjects/modAppAndroid/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/df7f321455baea333da44e082da40719/res/values-v16/values-v16.xml",
+                    "source": "/Users/pitch/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/30cdf9294da8ce28f88c2441f452bb42/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/e5de3ac2a7cc932f0658294749ae6e6f/res/values-v16/values-v16.xml",
+                    "source": "/Users/pitch/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b5373fb2c5b232a2ef5ca9a7fffd3b02/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -37,17 +37,17 @@ public class ConnectingServeur extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connecting_serveur);
-        Log.d("connecting server", "activité lancée");
+        Log.d("Server", "Activité lancée");
         boolean enabled = true;
 
         //-->Connexion Bluetooth
         if (mBluetoothAdapter == null) {
-            Log.d("BT Connection", "Device does not support BT");
+            Log.d("Server", "Device does not support BT");
         } else {
             if (!mBluetoothAdapter.isEnabled()) {
                 Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
                 startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
-                Log.d("Enabling BT", "Please activate BT");
+                Log.d("Server", "Please activate BT");
                 enabled = false;
 
                 Intent discoverableIntent =
@@ -56,7 +56,7 @@ public class ConnectingServeur extends AppCompatActivity {
                 startActivity(discoverableIntent);
 
             } else {
-                Log.d("Enabling BT", "Success");
+                Log.d("Server", "Enabling BT Success");
 
             }
 
@@ -73,15 +73,11 @@ public class ConnectingServeur extends AppCompatActivity {
                 }while(pairedDevices.size() == 0);
             }
 
-
-
-
-
             if (pairedDevices.size() > 0) {
                 // There are paired devices. Get the name and address of each paired device.
                 for (BluetoothDevice device : pairedDevices) {
 
-                    Log.d("Device Nameavantboucle", device.getName());
+                    Log.d("Server - Device Name", device.getName());
 
                     AcceptThreadServeur acceptThreadServeur = new AcceptThreadServeur();
                     acceptThreadServeur.run();

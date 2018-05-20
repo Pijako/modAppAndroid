@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/home/tpichel/AndroidStudioProjects/Drone/app/src/main/assets"/><source path="/home/tpichel/AndroidStudioProjects/Drone/app/build/generated/assets/shaders/debug"/></dataSet><dataSet config="debug"><source path="/home/tpichel/AndroidStudioProjects/Drone/app/src/debug/assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Users/pitch/StudioProjects/modAppAndroid/app/src/main/assets"/><source path="/Users/pitch/StudioProjects/modAppAndroid/app/build/generated/assets/shaders/debug"/></dataSet><dataSet config="debug"><source path="/Users/pitch/StudioProjects/modAppAndroid/app/src/debug/assets"/></dataSet></merger>

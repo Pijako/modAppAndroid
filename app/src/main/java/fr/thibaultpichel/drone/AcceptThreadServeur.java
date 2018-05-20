@@ -24,16 +24,16 @@ public class AcceptThreadServeur extends Thread {
         // because mmServerSocket is final.
         BluetoothServerSocket tmp = null;
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-        Log.d("AcceptThreadServer", "got a BT adapter");
+        Log.d("ATS", "Got a BT adapter");
         UUID MY_UUID = UUID.fromString("0d046699-661a-4e27-adf9-fec2ae1f352a");
         try {
             tmp = mBluetoothAdapter.listenUsingRfcommWithServiceRecord("DroneRemote", MY_UUID);
-            Log.d("TMP", "tmp OK");
+            Log.d("ATS - TMP", "tmp OK");
         } catch (IOException e) {
-            Log.e(TAG, "Socket's listen() method failed", e);
+            Log.e(TAG, "ATS - Socket's listen() method failed", e);
         }
         mmServerSocket = tmp;
-        Log.d("mServerSocket", mmServerSocket.toString());
+        Log.d("ATS - mServerSocket", mmServerSocket.toString());
     }
 
     public void run() {
@@ -45,7 +45,7 @@ public class AcceptThreadServeur extends Thread {
                 socket = mmServerSocket.accept();
                 Log.d("RUN", "1");
             } catch (IOException e) {
-                Log.e(TAG, "Socket's accept() method failed", e);
+                Log.e(TAG, "ATS - Socket's accept() method failed", e);
                 break;
             }
 
@@ -54,10 +54,9 @@ public class AcceptThreadServeur extends Thread {
                 // the connection in a separate thread.
                 Log.d("RUN", "2");
                 manageMyConnectedSocket(socket);
-                cancel(); //fermer le socket
                 try {
                     mmServerSocket.close();
-                    Log.d("RUN", "3");
+                    Log.d("RUN", "4");
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -68,13 +67,11 @@ public class AcceptThreadServeur extends Thread {
 
     private void manageMyConnectedSocket(BluetoothSocket socket) {
         //Lire/écrire les messages
-      /*  Log.d("RUN1", "4");
+        Log.d("Server", "manageMyConnectedSocket début");
         myBluetoothService = new MyBluetoothService(socket);
+
+        Log.d("Server", "Wait for message");
         this.myBluetoothService.getRunCT();
-        byte msg[]= new byte[50];
-        String s = "test message";
-        msg = s.getBytes();
-        this.myBluetoothService.getWriteCT(msg);*/
 
     }
 

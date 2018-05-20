@@ -26,6 +26,7 @@ public class ConnectingClient extends AppCompatActivity {
     private final BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
     // Create a BroadcastReceiver for ACTION_FOUND.
+    /*
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
         public void onReceive(Context context, Intent intent) {
             String action = intent.getAction();
@@ -37,7 +38,7 @@ public class ConnectingClient extends AppCompatActivity {
                 String deviceHardwareAddress = device.getAddress(); // MAC address
             }
         }
-    };
+    };*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,24 +48,26 @@ public class ConnectingClient extends AppCompatActivity {
 
         //-->Connexion Bluetooth
         if (mBluetoothAdapter == null) {
-            Log.d("BT Connection", "Device does not support BT");
+            Log.d("Client", "Device does not support BT");
         }
         else{
             if (!mBluetoothAdapter.isEnabled()) {
                 Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
                 startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
-                Log.d("Enabling BT", "Please activate BT");
+                Log.d("Client", "Please activate BT");
 
+                /*
                 Intent discoverableIntent =
                         new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
                 discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
-                startActivity(discoverableIntent);
+                startActivity(discoverableIntent);*/
             }
             else{
-                Log.d("Enabling BT", "Success");
+                Log.d("Client", "Enabling BT Success");
 
             }
 
+            /*
             Set<BluetoothDevice> pairedDevices = mBluetoothAdapter.getBondedDevices();
             if(!enabled){
                 IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_FOUND);
@@ -76,30 +79,47 @@ public class ConnectingClient extends AppCompatActivity {
                     pairedDevices = mBluetoothAdapter.getBondedDevices();
 
                 }while(pairedDevices.size() == 0);
+            }*/
+
+            Set<BluetoothDevice> pairedDevices = mBluetoothAdapter.getBondedDevices();
+            boolean found = false;
+            if (pairedDevices.size() > 0) {
+                // There are paired devices. Get the name and address of each paired device.
+                for (BluetoothDevice device : pairedDevices) {
+                    String deviceName = device.getName();
+                    Log.d("Client - Device Name", device.getName());
+                    String deviceHardwareAddress = device.getAddress(); // MAC address
+                    Log.d("Client - Device Adress", device.getAddress());
+                    if (device.getAddress().toLowerCase().equals("9c:d9:17:4a:93:ba")){
+                        ConnectThreadClient connectThreadClient = new ConnectThreadClient(device);
+                        connectThreadClient.run(); //On se connecte
+                        found = true;
+                    }
+                }
+                if(!found){
+                    Log.d("Client", "Server not found");
+                }
             }
-
-
-
-
+            /*
             if (pairedDevices.size() > 0) {
                 // There are paired devices. Get the name and address of each paired device.
                 for (BluetoothDevice device : pairedDevices) {
 
-                    Log.d("Device Nameavantboucle",  device.getName());
+                    Log.d("Client - Device Name",  device.getName());
 
                     for(ParcelUuid u : device.getUuids()){
                         ConnectThreadClient connectThreadClient = new ConnectThreadClient(device);
-                        Log.d("Device Name",  device.getName());
+                        Log.d("Client - Device Name",  device.getName());
                         connectThreadClient.run(); //On se connecte
 
-                        /*if(u.getUuid() == UUID.fromString("0d046699-661a-4e27-adf9-fec2ae1f352a")){
+                        if(u.getUuid() == UUID.fromString("0d046699-661a-4e27-adf9-fec2ae1f352a")){
                             ConnectThreadClient connectThreadClient = new ConnectThreadClient(device);
                             Log.d("Device Name",  device.getName());
                             connectThreadClient.run(); //On se connecte
                             found = true;
-                        }*/
+                        }
                     }
-                }
+                }*/
                 /*if(!found){
                     // Register for broadcasts when a device is discovered.
                     IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_FOUND);
@@ -138,11 +158,11 @@ public class ConnectingClient extends AppCompatActivity {
         }*/
     }
 
+    /*
     @Override
     protected void onDestroy() {
         super.onDestroy();
 
         // Don't forget to unregister the ACTION_FOUND receiver.
         unregisterReceiver(mReceiver);
-    }
-}
+    }*/
