@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.hardware.usb.UsbAccessory;
 import android.hardware.usb.UsbManager;
+import android.os.Handler;
 import android.os.ParcelUuid;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -24,6 +25,7 @@ public class ConnectingClient extends AppCompatActivity {
     public static final String ACTION_USB_PERMISSION = "com.android.example.USB_PERMISSION";
     private static final int REQUEST_ENABLE_BT = 1;
     private final BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+    private Handler handler;
 
     // Create a BroadcastReceiver for ACTION_FOUND.
     /*
@@ -91,8 +93,8 @@ public class ConnectingClient extends AppCompatActivity {
                     String deviceHardwareAddress = device.getAddress(); // MAC address
                     Log.d("Client - Device Adress", device.getAddress());
                     if (device.getAddress().toLowerCase().equals("9c:d9:17:4a:93:ba")){
-                        ConnectThreadClient connectThreadClient = new ConnectThreadClient(device);
-                        connectThreadClient.run(); //On se connecte
+                        ConnectThreadClient connectThreadClient = new ConnectThreadClient(device, handler);
+                        connectThreadClient.start(); //On se connecte
                         found = true;
                     }
                 }

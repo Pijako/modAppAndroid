@@ -29,10 +29,10 @@ public class MyBluetoothService {
     // Defines several constants used when transmitting messages between the
     // service and the UI.
 
-    public MyBluetoothService(BluetoothSocket socket){
+    public MyBluetoothService(BluetoothSocket socket, Handler h){
         this.socket = socket;
         this.ct = new ConnectedThread(socket);
-        this.mHandler = new Handler();
+        this.mHandler = h;
 
     }
     private interface MessageConstants {
@@ -92,6 +92,9 @@ public class MyBluetoothService {
 
                     String receivedMessage = reader.readLine();
                     Log.d("Server - Rcv Message", receivedMessage);
+                    Message msgForA = new Message();
+                    msgForA.obj = receivedMessage;
+                    MyBluetoothService.this.mHandler.sendMessage(msgForA);
 
                     //readMsg.sendToTarget();
                 } catch (IOException e) {

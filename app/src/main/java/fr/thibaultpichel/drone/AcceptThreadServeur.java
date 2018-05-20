@@ -3,6 +3,7 @@ package fr.thibaultpichel.drone;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothServerSocket;
 import android.bluetooth.BluetoothSocket;
+import android.os.Handler;
 import android.util.Log;
 
 import java.io.IOException;
@@ -18,10 +19,12 @@ public class AcceptThreadServeur extends Thread {
     private final BluetoothServerSocket mmServerSocket;
     private final BluetoothAdapter mBluetoothAdapter;
     private MyBluetoothService myBluetoothService;
+    private Handler handler;
 
-    public AcceptThreadServeur() {
+    public AcceptThreadServeur(Handler h) {
         // Use a temporary object that is later assigned to mmServerSocket
         // because mmServerSocket is final.
+        this.handler = h;
         BluetoothServerSocket tmp = null;
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         Log.d("ATS", "Got a BT adapter");
@@ -68,7 +71,7 @@ public class AcceptThreadServeur extends Thread {
     private void manageMyConnectedSocket(BluetoothSocket socket) {
         //Lire/écrire les messages
         Log.d("Server", "manageMyConnectedSocket début");
-        myBluetoothService = new MyBluetoothService(socket);
+        myBluetoothService = new MyBluetoothService(socket, this.handler);
 
         Log.d("Server", "Wait for message");
         this.myBluetoothService.getRunCT();

@@ -6,10 +6,13 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Handler;
+import android.os.Message;
 import android.os.ParcelUuid;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import java.util.Set;
 import java.util.UUID;
@@ -18,6 +21,7 @@ public class ConnectingServeur extends AppCompatActivity {
 
     private final BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
     private static final int REQUEST_ENABLE_BT = 1;
+    private Handler handler;
 
     // Create a BroadcastReceiver for ACTION_FOUND.
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
@@ -39,6 +43,13 @@ public class ConnectingServeur extends AppCompatActivity {
         setContentView(R.layout.activity_connecting_serveur);
         Log.d("Server", "Activité lancée");
         boolean enabled = true;
+        this.handler = new Handler(){
+            @Override
+            public void handleMessage(Message msg) {
+                ((TextView) findViewById(R.id.textView8)).setText("Réception Commandes");
+                ((TextView) findViewById(R.id.textView7)).setText(msg.obj.toString());
+            }
+        };
 
         //-->Connexion Bluetooth
         if (mBluetoothAdapter == null) {
@@ -79,8 +90,8 @@ public class ConnectingServeur extends AppCompatActivity {
 
                     Log.d("Server - Device Name", device.getName());
 
-                    AcceptThreadServeur acceptThreadServeur = new AcceptThreadServeur();
-                    acceptThreadServeur.run();
+                    AcceptThreadServeur acceptThreadServeur = new AcceptThreadServeur(this.handler);
+                    acceptThreadServeur.start();
 
                     /*for (ParcelUuid u : device.getUuids()) {
                         if (u.getUuid() == UUID.fromString("0d046699-661a-4e27-adf9-fec2ae1f352a")) {

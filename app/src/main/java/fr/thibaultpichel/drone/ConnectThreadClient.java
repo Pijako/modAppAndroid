@@ -3,6 +3,7 @@ package fr.thibaultpichel.drone;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
+import android.os.Handler;
 import android.util.Log;
 
 import java.io.IOException;
@@ -19,11 +20,13 @@ public class ConnectThreadClient extends Thread {
     private final BluetoothDevice mmDevice;
     private final BluetoothAdapter mBluetoothAdapter;
     private MyBluetoothService myBluetoothService;
+    private Handler handler;
 
-    public ConnectThreadClient(BluetoothDevice device) {
+    public ConnectThreadClient(BluetoothDevice device, Handler h) {
         // Use a temporary object that is later assigned to mmSocket
         // because mmSocket is final.
         BluetoothSocket tmp = null;
+        this.handler = h;
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         mmDevice = device;
         Log.d("CTC - mclientSocket","avant try");
@@ -64,17 +67,19 @@ public class ConnectThreadClient extends Thread {
         // The connection attempt succeeded. Perform work associated with
         // the connection in a separate thread.
         manageMyConnectedSocket(mmSocket);
-        cancel(); //fermer le socket
+        //cancel(); //fermer le socket
     }
 
     private void manageMyConnectedSocket(BluetoothSocket socket) {
         Log.d("Client", "manageMyConnectedSocket début");
         //Lire/écrire les messages
-        myBluetoothService = new MyBluetoothService(socket);
+        myBluetoothService = new MyBluetoothService(socket, this.handler);
 
         String message = new String("test message");
         this.myBluetoothService.getWriteCT(message);
         Log.d("Client", "Message envoyé");
+
+
     }
 
     // Closes the client socket and causes the thread to finish.
