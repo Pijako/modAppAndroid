@@ -5,10 +5,7 @@ import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.os.AsyncTask;
 import android.os.Handler;
-import android.os.Message;
 import android.util.Log;
-import android.widget.TextView;
-
 import java.io.IOException;
 import java.util.UUID;
 
@@ -22,9 +19,7 @@ public class ConnectClientTask extends AsyncTask<Void, Void, MyBluetoothService>
     private final BluetoothSocket mmSocket;
     private final BluetoothDevice mmDevice;
     private final BluetoothAdapter mBluetoothAdapter;
-    private MyBluetoothService myBluetoothService;
     private Handler handler;
-    private Handler controlHandler;
 
     public ConnectClientTask(BluetoothDevice device, Handler h) {
         // Use a temporary object that is later assigned to mmSocket
@@ -38,7 +33,7 @@ public class ConnectClientTask extends AsyncTask<Void, Void, MyBluetoothService>
             // Get a BluetoothSocket to connect with the given BluetoothDevice.
             // MY_UUID is the app's UUID string, also used in the server code.
             UUID MY_UUID = UUID.fromString("0d046699-661a-4e27-adf9-fec2ae1f352a");
-            tmp = device.createRfcommSocketToServiceRecord(MY_UUID);
+            tmp = mmDevice.createRfcommSocketToServiceRecord(MY_UUID);
             Log.d("CTC - mclientSocket", tmp.toString());
         } catch (IOException e) {
             Log.e(TAG, "CTC - Socket's create() method failed", e);
@@ -68,16 +63,14 @@ public class ConnectClientTask extends AsyncTask<Void, Void, MyBluetoothService>
             return null;
         }
 
-        // The connection attempt succeeded. Perform work associated with
-        // the connection in a separate thread.
-        manageMyConnectedSocket(this.mmSocket); //Ne sert plus à rien
+        //Éventuelle utilisation de manageMyConnectedSocket() pour tester la connexion
+
         return new MyBluetoothService(mmSocket, this.handler);
-        //cancel(); //fermer le socket
+        //cancel();
     }
 
     private void manageMyConnectedSocket(BluetoothSocket socket) {
-        Log.d("Client", "manageMyConnectedSocket début");
-        //Lire/écrire les messages pour tester la connexion
+        //Lire ou écrire des messages pour tester la connexion
     }
 
     // Closes the client socket and causes the thread to finish.

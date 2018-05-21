@@ -18,11 +18,15 @@ import java.io.IOException;
 import java.util.Set;
 import java.util.UUID;
 
-public class ConnectingServeur extends AppCompatActivity {
+public class Server extends AppCompatActivity {
 
-    private final BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+    public static final String ACTION_USB_PERMISSION = "com.android.example.USB_PERMISSION";
     private static final int REQUEST_ENABLE_BT = 1;
+    private final BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
     private Handler handler;
+    private Set<BluetoothDevice> pairedDevices;
+    private Intent enableBtIntent, discoverableIntent;
+    private IntentFilter filter;
 
     // Create a BroadcastReceiver for ACTION_FOUND.
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
@@ -41,9 +45,9 @@ public class ConnectingServeur extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_connecting_serveur);
+        setContentView(R.layout.activity_server);
         Log.d("Server", "Activité lancée");
-        boolean enabled = true;
+
         this.handler = new Handler() {
             @Override
             public void handleMessage(Message msg) {
@@ -53,38 +57,29 @@ public class ConnectingServeur extends AppCompatActivity {
             }
         };
 
-        //-->Connexion Bluetooth
+        // On vérifie que le BT est supporté
         if (mBluetoothAdapter == null) {
             Log.d("Server", "Device does not support BT");
         } else {
+            // On vérifie que le BT est activé
             if (!mBluetoothAdapter.isEnabled()) {
-                Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-                startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
                 Log.d("Server", "Please activate BT");
-                enabled = false;
 
-                Intent discoverableIntent =
-                        new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
+                this.enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+                startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
+
+                this.discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
                 discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
                 startActivity(discoverableIntent);
 
-            } else {
-                Log.d("Server", "Enabling BT Success");
-
-            }
-
-            Set<BluetoothDevice> pairedDevices = mBluetoothAdapter.getBondedDevices();
-
-            if (!enabled) {
-                IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_FOUND);
+                this.filter = new IntentFilter(BluetoothDevice.ACTION_FOUND);
                 registerReceiver(mReceiver, filter);
 
-                do {
-
-                    pairedDevices = mBluetoothAdapter.getBondedDevices();
-
-                } while (pairedDevices.size() == 0);
+            } else {
+                Log.d("Server", "Enabling BT Success");
             }
+
+            this.pairedDevices = mBluetoothAdapter.getBondedDevices();
 
             if (pairedDevices.size() > 0) {
                 // There are paired devices. Get the name and address of each paired device.
@@ -92,26 +87,12 @@ public class ConnectingServeur extends AppCompatActivity {
 
                     Log.d("Server - Device Name", device.getName());
 
-                    AcceptThreadServeur acceptThreadServeur = new AcceptThreadServeur(this.handler);
-                    acceptThreadServeur.start();
+                    if (device.getAddress().toLowerCase().equals("ec:88:92:35:0d:29")) {
+                        AcceptThreadServeur acceptThreadServeur = new AcceptThreadServeur(this.handler);
+                        acceptThreadServeur.start();
+                    }
 
-                    /*for (ParcelUuid u : device.getUuids()) {
-                        if (u.getUuid() == UUID.fromString("0d046699-661a-4e27-adf9-fec2ae1f352a")) {
-                            Log.d("Device Name", device.getName());
-                            AcceptThreadServeur acceptThreadServeur = new AcceptThreadServeur();
-                            acceptThreadServeur.run();
-                            found = true;
-                        }
-                    }*/
                 }
-                /*if (!found) {
-                    // Register for broadcasts when a device is discovered.
-                    IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_FOUND);
-                    registerReceiver(mReceiver, filter);
-                } else {
-                    Log.d("Pairing Device found", "No Broadcast needed");
-                }*/
-
             }
 
         }

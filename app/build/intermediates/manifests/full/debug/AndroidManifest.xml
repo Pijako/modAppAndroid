@@ -44,8 +44,8 @@
             android:name="fr.thibaultpichel.drone.DroneControl"
             android:label="@string/title_activity_drone_control"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="fr.thibaultpichel.drone.ConnectingClient" />
-        <activity android:name="fr.thibaultpichel.drone.ConnectingServeur" />
+        <activity android:name="fr.thibaultpichel.drone.Client" />
+        <activity android:name="fr.thibaultpichel.drone.Server" />
 
         <meta-data
             android:name="android.support.VERSION"

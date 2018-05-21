@@ -4,18 +4,15 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
 import android.os.Handler;
-import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-
 import java.io.IOException;
 import java.util.Set;
 
-public class ConnectingClient extends AppCompatActivity {
+public class Client extends AppCompatActivity {
 
     public static final String ACTION_USB_PERMISSION = "com.android.example.USB_PERMISSION";
     private static final int REQUEST_ENABLE_BT = 1;
@@ -26,23 +23,25 @@ public class ConnectingClient extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_connecting_client);
+        setContentView(R.layout.activity_client);
         boolean enabled = true;
         this.handler = new Handler();
 
-        //-->Connexion Bluetooth
+        // On vérifie que le BT est supporté
         if (mBluetoothAdapter == null) {
             Log.d("Client", "Device does not support BT");
         }
-        else{
+        else{ // On vérifie que le BT est activé
             if (!mBluetoothAdapter.isEnabled()) {
+                Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+                startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
                 Log.d("Client", "Please enable BT");
             }
             else{
                 Log.d("Client", "Enabling BT Success");
 
             }
-
+            //On cherche l'autre téléphone parmis les appareils déjà appareillés
             Set<BluetoothDevice> pairedDevices = mBluetoothAdapter.getBondedDevices();
             boolean found = false;
             if (pairedDevices.size() > 0) {
@@ -61,10 +60,10 @@ public class ConnectingClient extends AppCompatActivity {
                             }
                         };
 
-                        connectClientTask.execute(); //On se connecte
+                        connectClientTask.execute(); //On lance l'AsyncTask de connexion
                         found = true;
 
-                        setContentView(R.layout.activity_drone_control);
+                        setContentView(R.layout.content_drone_control);
                         //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
                         //setSupportActionBar(toolbar);
 

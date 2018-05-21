@@ -69,12 +69,13 @@ public class AcceptThreadServeur extends Thread {
     }
 
     private void manageMyConnectedSocket(BluetoothSocket socket) {
-        //Lire/écrire les messages
+
         Log.d("Server", "manageMyConnectedSocket début");
+
         myBluetoothService = new MyBluetoothService(socket, this.handler);
 
         Log.d("Server", "Wait for message");
-        this.myBluetoothService.getRunCT();
+        this.myBluetoothService.startConnectedThread();
 
     }
 

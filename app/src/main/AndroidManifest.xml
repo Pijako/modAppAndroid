@@ -37,8 +37,8 @@
             android:name=".DroneControl"
             android:label="@string/title_activity_drone_control"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ConnectingClient" />
-        <activity android:name=".ConnectingServeur"></activity>
+        <activity android:name=".Client" />
+        <activity android:name=".Server"></activity>
     </application>
 
 </manifest>

@@ -19,14 +19,14 @@ public class MyBluetoothService {
     private static final String TAG = "MY_APP_DEBUG_TAG";
     private Handler mHandler; // handler that gets info from Bluetooth service
     private BluetoothSocket socket;
-    private ConnectedThread ct;
+    private ConnectedThread connectedThread;
 
     // Defines several constants used when transmitting messages between the
     // service and the UI.
 
     public MyBluetoothService(BluetoothSocket socket, Handler h){
         this.socket = socket;
-        this.ct = new ConnectedThread(socket);
+        this.connectedThread = new ConnectedThread(socket);
         this.mHandler = h;
 
     }
@@ -38,11 +38,14 @@ public class MyBluetoothService {
         // ... (Add other message types here as needed.)
     }
 
-    public void getRunCT(){
-        this.ct.run();
+    public void startConnectedThread(){
+        this.connectedThread.start();
     }
+
     public void sendCommand(String message){
-        this.ct.write(message);
+        this.connectedThread.write(message);
+        Log.d("Client send Command", message);
+
     }
 
     private class ConnectedThread extends Thread {
@@ -54,13 +57,13 @@ public class MyBluetoothService {
         PrintWriter writer;
 
         public ConnectedThread(BluetoothSocket socket) {
-            mmSocket = socket;
+            this.mmSocket = socket;
 
             // Get the input and output streams; using temp objects because
             // member streams are final.
             try {
-                mmInStream = socket.getInputStream();
-                mmOutStream = socket.getOutputStream();
+                mmInStream = mmSocket.getInputStream();
+                mmOutStream = mmSocket.getOutputStream();
                 reader = new BufferedReader(new InputStreamReader(mmInStream));
                 writer = new PrintWriter(mmOutStream, true);
             } catch (IOException e) {
@@ -93,7 +96,6 @@ public class MyBluetoothService {
 
         // Call this from the main activity to send data to the remote device.
         public void write(String message) {
-            Log.d("Client - write", "début envoie");
             writer.println(message);
         }
 

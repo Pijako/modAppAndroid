@@ -131,14 +131,14 @@ ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifes
 		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:39:13-56
 	android:name
 		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:37:13-41
-activity#fr.thibaultpichel.drone.ConnectingClient
-ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:40:9-54
+activity#fr.thibaultpichel.drone.Client
+ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:40:9-44
 	android:name
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:40:19-51
-activity#fr.thibaultpichel.drone.ConnectingServeur
-ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:41:9-64
+		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:40:19-41
+activity#fr.thibaultpichel.drone.Server
+ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:41:9-53
 	android:name
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:41:19-52
+		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:41:19-41
 uses-sdk
 INJECTED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml

@@ -39,12 +39,12 @@ public class DroneConnection extends AppCompatActivity implements View.OnClickLi
         Intent playIntent;
         switch(v.getId()) {
             case R.id.button_connect_client:
-                playIntent = new Intent(this, ConnectingClient.class);
+                playIntent = new Intent(this, Client.class);
                 startActivity(playIntent);
                 break;
 
             case R.id.button_connect_server:
-                playIntent = new Intent(this, ConnectingServeur.class);
+                playIntent = new Intent(this, Server.class);
                 startActivity(playIntent);
                 break;
         }

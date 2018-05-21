@@ -3853,10 +3853,10 @@ public final class R {
     public static final int abc_search_dropdown_item_icons_2line=0x7f0a0018;
     public static final int abc_search_view=0x7f0a0019;
     public static final int abc_select_dialog_material=0x7f0a001a;
-    public static final int activity_connecting_client=0x7f0a001b;
-    public static final int activity_connecting_serveur=0x7f0a001c;
-    public static final int activity_drone_connection=0x7f0a001d;
-    public static final int activity_drone_control=0x7f0a001e;
+    public static final int activity_client=0x7f0a001b;
+    public static final int activity_drone_connection=0x7f0a001c;
+    public static final int activity_drone_control=0x7f0a001d;
+    public static final int activity_server=0x7f0a001e;
     public static final int content_drone_connection=0x7f0a001f;
     public static final int content_drone_control=0x7f0a0020;
     public static final int design_bottom_navigation_item=0x7f0a0021;

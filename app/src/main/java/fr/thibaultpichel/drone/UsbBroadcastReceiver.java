@@ -28,10 +28,11 @@ public class UsbBroadcastReceiver extends BroadcastReceiver {
     private ParcelFileDescriptor mFileDescriptor;
     private FileDescriptor fd;
     private FileOutputStream mOutputStream;
+    private Context appContext;
 
     public void onReceive(Context context, Intent intent) {
         String action = intent.getAction();
-        Context appContext = context;
+         appContext = context;
 
         if (action.equals(ACTION_USB_PERMISSION)) {
             //Le drone a accepte la connection USB
