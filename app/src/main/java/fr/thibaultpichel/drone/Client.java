@@ -52,20 +52,16 @@ public class Client extends AppCompatActivity {
                     String deviceHardwareAddress = device.getAddress(); // MAC address
                     Log.d("Client - Device Adress", device.getAddress());
                     if (device.getAddress().toLowerCase().equals("9c:d9:17:4a:93:ba")){
+                        found = true;
 
                         ConnectClientTask connectClientTask = new ConnectClientTask(device, handler){
                             @Override
                             protected void onPostExecute(MyBluetoothService mbs) {
                                 myBluetoothService = mbs;
+                                setContentView(R.layout.content_drone_control);
                             }
                         };
-
                         connectClientTask.execute(); //On lance l'AsyncTask de connexion
-                        found = true;
-
-                        setContentView(R.layout.content_drone_control);
-                        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-                        //setSupportActionBar(toolbar);
 
                         Log.d("Client", "You can send commands");
                     }
@@ -74,8 +70,8 @@ public class Client extends AppCompatActivity {
                     Log.d("Client", "Server not found");
                 }
             }
-            }
         }
+    }
 
     public void onClick(View v) throws IOException {
         Button b_clique = (Button) findViewById(v.getId());

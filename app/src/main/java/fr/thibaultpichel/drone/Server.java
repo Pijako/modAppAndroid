@@ -27,6 +27,7 @@ public class Server extends AppCompatActivity {
     private Set<BluetoothDevice> pairedDevices;
     private Intent enableBtIntent, discoverableIntent;
     private IntentFilter filter;
+    private MyBluetoothService myBluetoothService;
 
     // Create a BroadcastReceiver for ACTION_FOUND.
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
@@ -53,7 +54,13 @@ public class Server extends AppCompatActivity {
             public void handleMessage(Message msg) {
                 ((TextView) findViewById(R.id.textView8)).setText("Réception Commandes");
                 ((TextView) findViewById(R.id.textView7)).setText(msg.obj.toString());
-                sendByUsb(msg.obj.toString());
+                if(!msg.equals("followme")){
+                    sendByUsb(msg.obj.toString());
+                }
+                else{
+                    MyBluetoothService mesureServer = new MyBluetoothService(myBluetoothService.getSocket());
+                    mesureServer.startConnectedThread();
+                }
             }
         };
 
@@ -88,8 +95,15 @@ public class Server extends AppCompatActivity {
                     Log.d("Server - Device Name", device.getName());
 
                     if (device.getAddress().toLowerCase().equals("ec:88:92:35:0d:29")) {
-                        AcceptThreadServeur acceptThreadServeur = new AcceptThreadServeur(this.handler);
-                        acceptThreadServeur.start();
+
+                        ConnectServerTask connectServerTask = new ConnectServerTask(this.handler){
+                            @Override
+                            protected void onPostExecute(MyBluetoothService mbs) {
+                                myBluetoothService = mbs;
+                                myBluetoothService.startConnectedThread();
+                            }
+                        };
+                        connectServerTask.execute();
                     }
 
                 }

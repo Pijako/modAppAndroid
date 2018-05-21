@@ -11,7 +11,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
 
         <Button
@@ -30,9 +30,9 @@
             android:id="@+id/b_fwd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/b_up"
+            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="71dp"
             android:contentDescription="Forward"
             android:onClick="onClick"
             android:text="FWD" />
@@ -68,10 +68,9 @@
             android:id="@+id/b_hover"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/b_mvleft"
-            android:layout_alignBottom="@+id/b_mvleft"
-            android:layout_toEndOf="@+id/b_tleft"
-            android:layout_toRightOf="@+id/b_tleft"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="127dp"
             android:contentDescription="Hover"
             android:onClick="onClick"
             android:text="HOVER" />
@@ -80,10 +79,8 @@
             android:id="@+id/b_mvleft"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/b_tleft"
             android:layout_alignStart="@+id/b_tleft"
-            android:layout_below="@+id/b_tleft"
-            android:layout_marginTop="16dp"
+            android:layout_alignTop="@+id/b_hover"
             android:contentDescription="MovLeft"
             android:onClick="onClick"
             android:text="MVLEFT" />
@@ -103,10 +100,8 @@
             android:id="@+id/b_bwd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/b_hover"
-            android:layout_alignStart="@+id/b_hover"
             android:layout_below="@+id/b_hover"
-            android:layout_marginTop="12dp"
+            android:layout_centerHorizontal="true"
             android:contentDescription="Backward"
             android:onClick="onClick"
             android:text="BWD" />
@@ -126,10 +121,9 @@
             android:id="@+id/b_takeoff"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/b_down"
-            android:layout_alignStart="@+id/b_down"
-            android:layout_below="@+id/b_down"
-            android:layout_marginTop="33dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="170dp"
             android:contentDescription="takeOff"
             android:onClick="onClick"
             android:text="TAKE OFF" />
@@ -162,9 +156,9 @@
             android:id="@+id/b_end"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/b_takeoff"
-            android:layout_alignStart="@+id/b_takeoff"
             android:layout_below="@+id/b_takeoff"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-170dp"
             android:contentDescription="End"
             android:onClick="onClick"
             android:text="END" />
@@ -178,5 +172,15 @@
             android:contentDescription="Emergency"
             android:onClick="onClick"
             android:text="EMERGENCY" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="18dp"
+            android:contentDescription="followme"
+            android:text="Follow Me !" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

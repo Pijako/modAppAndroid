@@ -3,6 +3,7 @@ package fr.thibaultpichel.drone;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothServerSocket;
 import android.bluetooth.BluetoothSocket;
+import android.os.AsyncTask;
 import android.os.Handler;
 import android.util.Log;
 
@@ -15,13 +16,12 @@ import static android.content.ContentValues.TAG;
  * Created by tpichel on 16/05/18.
  */
 
-public class AcceptThreadServeur extends Thread {
+public class ConnectServerTask extends AsyncTask<Void, Void, MyBluetoothService> {
     private final BluetoothServerSocket mmServerSocket;
     private final BluetoothAdapter mBluetoothAdapter;
-    private MyBluetoothService myBluetoothService;
     private Handler handler;
 
-    public AcceptThreadServeur(Handler h) {
+    public ConnectServerTask(Handler h) {
         // Use a temporary object that is later assigned to mmServerSocket
         // because mmServerSocket is final.
         this.handler = h;
@@ -39,14 +39,14 @@ public class AcceptThreadServeur extends Thread {
         Log.d("ATS - mServerSocket", mmServerSocket.toString());
     }
 
-    public void run() {
-        Log.d("RUN", "0");
+    protected MyBluetoothService doInBackground(Void... values) {
+        Log.d("dIB", "0");
         BluetoothSocket socket = null;
         // Keep listening until exception occurs or a socket is returned.
         while (true) {
             try {
                 socket = mmServerSocket.accept();
-                Log.d("RUN", "1");
+                Log.d("dIB", "1");
             } catch (IOException e) {
                 Log.e(TAG, "ATS - Socket's accept() method failed", e);
                 break;
@@ -55,27 +55,22 @@ public class AcceptThreadServeur extends Thread {
             if (socket != null) {
                 // A connection was accepted. Perform work associated with
                 // the connection in a separate thread.
-                Log.d("RUN", "2");
-                manageMyConnectedSocket(socket);
+                Log.d("dIB", "2");
+                //manageMyConnectedSocket(socket);
                 try {
                     mmServerSocket.close();
-                    Log.d("RUN", "4");
+                    Log.d("dIB", "3");
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
                 break;
             }
         }
+        return new MyBluetoothService(socket, this.handler);
     }
 
     private void manageMyConnectedSocket(BluetoothSocket socket) {
-
-        Log.d("Server", "manageMyConnectedSocket début");
-
-        myBluetoothService = new MyBluetoothService(socket, this.handler);
-
-        Log.d("Server", "Wait for message");
-        this.myBluetoothService.startConnectedThread();
+        //Lire ou écrire des messages pour tester la connexion
 
     }
 

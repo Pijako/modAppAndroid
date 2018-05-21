@@ -15,7 +15,7 @@ import java.io.PrintWriter;
  * Created by tpichel on 18/05/18.
  */
 
-public class MyBluetoothService {
+public class MesureThreadServer {
     private static final String TAG = "MY_APP_DEBUG_TAG";
     private Handler mHandler; // handler that gets info from Bluetooth service
     private BluetoothSocket socket;
@@ -24,13 +24,7 @@ public class MyBluetoothService {
     // Defines several constants used when transmitting messages between the
     // service and the UI.
 
-    public MyBluetoothService(BluetoothSocket socket, Handler h){
-        this.socket = socket;
-        this.connectedThread = new ConnectedThread(socket);
-        this.mHandler = h;
-    }
-
-    public MyBluetoothService(BluetoothSocket socket){
+    public MesureThreadServer(BluetoothSocket socket){
         this.socket = socket;
         this.connectedThread = new ConnectedThread(socket);
     }
@@ -68,7 +62,8 @@ public class MyBluetoothService {
         public ConnectedThread(BluetoothSocket socket) {
             this.mmSocket = socket;
 
-            // Get the input and output streams
+            // Get the input and output streams; using temp objects because
+            // member streams are final.
             try {
                 mmInStream = mmSocket.getInputStream();
                 mmOutStream = mmSocket.getOutputStream();
@@ -88,11 +83,9 @@ public class MyBluetoothService {
             Log.d("Server - Run", "début attente message");
             while (true) {
                 try {
-                    //On lit le message reçu
+
                     String receivedMessage = reader.readLine();
                     Log.d("Server - Rcv Message", receivedMessage);
-
-                    //On l'envoie à l'activité Server via le Handler
                     Message msgForA = new Message();
                     msgForA.obj = receivedMessage;
                     MyBluetoothService.this.mHandler.sendMessage(msgForA);
@@ -106,7 +99,6 @@ public class MyBluetoothService {
 
         // Call this from the main activity to send data to the remote device.
         public void write(String message) {
-            //On écrit dans le writer
             writer.println(message);
         }
 

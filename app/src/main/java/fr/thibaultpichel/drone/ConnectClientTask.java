@@ -52,7 +52,6 @@ public class ConnectClientTask extends AsyncTask<Void, Void, MyBluetoothService>
             Log.d("CTC - mclientSocket", "run - avantconnect");
             mmSocket.connect();
 
-
         } catch (IOException connectException) {
             // Unable to connect; close the socket and return.
             try {
