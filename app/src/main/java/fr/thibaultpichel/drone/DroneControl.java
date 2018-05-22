@@ -25,7 +25,7 @@ import static fr.thibaultpichel.drone.DroneConnection.ACTION_USB_PERMISSION;
 
 public class DroneControl extends AppCompatActivity {
 
-    //UsbManager usbMan = (UsbManager) getSystemService(Context.USB_SERVICE);
+    UsbManager usbMan = (UsbManager) getSystemService(Context.USB_SERVICE);
     IntentFilter filter = new IntentFilter(ACTION_USB_PERMISSION);
 
     @Override
@@ -56,6 +56,10 @@ public class DroneControl extends AppCompatActivity {
             usbBroadcastReceiver.sendToAccessory("CalibrateMagneto");
             usbBroadcastReceiver.sendToAccessory("CalibrateMagneto");
             usbBroadcastReceiver.sendToAccessory("CalibrateMagneto");
+
+        }
+        else if(b_clique.getContentDescription().equals("followme")) {
+
 
         }
 

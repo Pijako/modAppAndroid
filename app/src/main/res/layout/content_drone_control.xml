@@ -174,13 +174,14 @@
             android:text="EMERGENCY" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/b_followme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="18dp"
             android:contentDescription="followme"
+            android:onClick="onClick"
             android:text="Follow Me !" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

@@ -1,219 +1,223 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:2:1-44:12
-INJECTED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:2:1-44:12
-INJECTED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:2:1-44:12
-INJECTED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:2:1-44:12
-MERGED from [com.android.support:design:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/da1ff8b14022d6ee61842183241c49f2/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b5373fb2c5b232a2ef5ca9a7fffd3b02/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/ff49a188269394368fe7e1dc71d9364d/AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/6b1227df706d78192fce8f56ca5c1974/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/6ba69997ae14146f58b43d7c9fafa810/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/6704fdaea10390a974c61df9c2aff243/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:transition:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/258cf4aa77a7bef2f31735ae6d05a2ba/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-v4:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/7941a75fb199bb99ac4789a4ce53b99a/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-media-compat:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/27eab240c67372d11eb137e2731aec9e/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-fragment:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/c4bcc3431a4ed5152ef597b351c0fa3d/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-utils:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/efd6ca9711416435e333326f5ca7c991/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-ui:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/35c964691d08eab56f1d8202721e65c8/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-compat:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/30cdf9294da8ce28f88c2441f452bb42/AndroidManifest.xml:17:1-31:12
-MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/5694b19f1b8a9538ef9b34cb2a2c2f84/AndroidManifest.xml:17:1-30:12
-INJECTED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:2:1-44:12
-INJECTED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:2:1-44:12
-INJECTED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:2:1-44:12
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:2:1-46:12
+INJECTED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:2:1-46:12
+INJECTED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:2:1-46:12
+INJECTED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:2:1-46:12
+MERGED from [com.android.support:design:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/9f1027b02d7a626477de457fbd2be105/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:appcompat-v7:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/fbd745574ee13c5d453d01312b3d036b/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/2588a19738a53a1b7b511b5314ab9fb1/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/ec9a0bb9b58e39a4d8573882c870458e/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/5e420460874e6429a6befb7fbb901520/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/507b09901546d77d183b4e75e5864012/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:transition:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/0f8d19eb535e2478ef7077ad14274307/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/117e8d8ae42e632ff7124e649dcedf4e/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/82fd56cc0b29edfe8637384fc47e8b3d/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/04b391deabc223e42231f29b3475750c/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/a5406ea7685cc0fe3977261feacf62a1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/c9cf6186fca1864c542a243f63aeac09/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/817dbe1b3b9990ea6702f313827bf4dd/AndroidManifest.xml:17:1-31:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/5fbefb4663b55023e0b0ba2818829b63/AndroidManifest.xml:17:1-30:12
+INJECTED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:2:1-46:12
+INJECTED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:2:1-46:12
+INJECTED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:2:1-46:12
 	package
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:3:5-38
-		INJECTED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:3:5-38
+		INJECTED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml
+		INJECTED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:2:1-44:12
-		INJECTED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml
+		INJECTED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:2:1-46:12
+		INJECTED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:2:1-44:12
-		INJECTED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml
+		INJECTED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:2:1-46:12
+		INJECTED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:2:11-69
 uses-feature#android.hardware.usb.accessory
-ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:5:5-67
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:5:5-67
 	android:name
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:5:19-64
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:5:19-64
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:7:5-76
+	android:name
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:7:22-73
 uses-permission#android.permission.BLUETOOTH
-ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:7:5-68
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:9:5-68
 	android:name
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:7:22-65
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:9:22-65
 uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:8:5-74
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:10:5-74
 	android:name
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:8:22-71
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:10:22-71
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:9:5-81
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:11:5-81
 	android:name
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:9:22-78
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:11:22-78
 application
-ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:12:5-42:19
-MERGED from [com.android.support:design:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/da1ff8b14022d6ee61842183241c49f2/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:design:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/da1ff8b14022d6ee61842183241c49f2/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b5373fb2c5b232a2ef5ca9a7fffd3b02/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b5373fb2c5b232a2ef5ca9a7fffd3b02/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/ff49a188269394368fe7e1dc71d9364d/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/ff49a188269394368fe7e1dc71d9364d/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/6b1227df706d78192fce8f56ca5c1974/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/6b1227df706d78192fce8f56ca5c1974/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/6ba69997ae14146f58b43d7c9fafa810/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/6ba69997ae14146f58b43d7c9fafa810/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/6704fdaea10390a974c61df9c2aff243/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/6704fdaea10390a974c61df9c2aff243/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:transition:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/258cf4aa77a7bef2f31735ae6d05a2ba/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:transition:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/258cf4aa77a7bef2f31735ae6d05a2ba/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-v4:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/7941a75fb199bb99ac4789a4ce53b99a/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-v4:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/7941a75fb199bb99ac4789a4ce53b99a/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-media-compat:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/27eab240c67372d11eb137e2731aec9e/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-media-compat:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/27eab240c67372d11eb137e2731aec9e/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-fragment:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/c4bcc3431a4ed5152ef597b351c0fa3d/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-fragment:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/c4bcc3431a4ed5152ef597b351c0fa3d/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/efd6ca9711416435e333326f5ca7c991/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/efd6ca9711416435e333326f5ca7c991/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-ui:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/35c964691d08eab56f1d8202721e65c8/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-ui:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/35c964691d08eab56f1d8202721e65c8/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-compat:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/30cdf9294da8ce28f88c2441f452bb42/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-compat:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/30cdf9294da8ce28f88c2441f452bb42/AndroidManifest.xml:25:5-29:19
-MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/5694b19f1b8a9538ef9b34cb2a2c2f84/AndroidManifest.xml:24:5-28:19
-MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/5694b19f1b8a9538ef9b34cb2a2c2f84/AndroidManifest.xml:24:5-28:19
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:14:5-44:19
+MERGED from [com.android.support:design:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/9f1027b02d7a626477de457fbd2be105/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:design:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/9f1027b02d7a626477de457fbd2be105/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/fbd745574ee13c5d453d01312b3d036b/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/fbd745574ee13c5d453d01312b3d036b/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/2588a19738a53a1b7b511b5314ab9fb1/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/2588a19738a53a1b7b511b5314ab9fb1/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/ec9a0bb9b58e39a4d8573882c870458e/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/ec9a0bb9b58e39a4d8573882c870458e/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/5e420460874e6429a6befb7fbb901520/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/5e420460874e6429a6befb7fbb901520/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/507b09901546d77d183b4e75e5864012/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/507b09901546d77d183b4e75e5864012/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/0f8d19eb535e2478ef7077ad14274307/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/0f8d19eb535e2478ef7077ad14274307/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/117e8d8ae42e632ff7124e649dcedf4e/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/117e8d8ae42e632ff7124e649dcedf4e/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/82fd56cc0b29edfe8637384fc47e8b3d/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/82fd56cc0b29edfe8637384fc47e8b3d/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/04b391deabc223e42231f29b3475750c/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/04b391deabc223e42231f29b3475750c/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/a5406ea7685cc0fe3977261feacf62a1/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/a5406ea7685cc0fe3977261feacf62a1/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/c9cf6186fca1864c542a243f63aeac09/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/c9cf6186fca1864c542a243f63aeac09/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/817dbe1b3b9990ea6702f313827bf4dd/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/817dbe1b3b9990ea6702f313827bf4dd/AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/5fbefb4663b55023e0b0ba2818829b63/AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/5fbefb4663b55023e0b0ba2818829b63/AndroidManifest.xml:24:5-28:19
 	android:supportsRtl
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:17:9-35
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:19:9-35
 	android:label
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:15:9-41
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:17:9-41
 	android:roundIcon
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:16:9-54
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:18:9-54
 	android:icon
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:14:9-43
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:16:9-43
 	android:allowBackup
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:13:9-35
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:15:9-35
 	android:theme
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:18:9-40
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:20:9-40
 activity#fr.thibaultpichel.drone.DroneConnection
-ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:19:9-35:20
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:21:9-37:20
 	android:label
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:21:13-45
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:23:13-45
 	android:theme
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:22:13-56
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:24:13-56
 	android:name
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:20:13-44
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:22:13-44
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:23:13-27:29
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:25:13-29:29
 action#android.intent.action.MAIN
-ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:24:17-69
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:26:17-69
 	android:name
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:24:25-66
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:26:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:26:17-77
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:28:17-77
 	android:name
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:26:27-74
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:28:27-74
 intent-filter#action:name:android.hardware.usb.action.USB_ACCESSORY_ATTACHED
-ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:28:13-30:29
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:30:13-32:29
 action#android.hardware.usb.action.USB_ACCESSORY_ATTACHED
-ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:29:17-93
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:31:17-93
 	android:name
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:29:25-90
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:31:25-90
 meta-data#android.hardware.usb.action.USB_ACCESSORY_ATTACHED
-ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:32:13-34:60
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:34:13-36:60
 	android:resource
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:34:17-57
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:36:17-57
 	android:name
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:33:17-82
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:35:17-82
 activity#fr.thibaultpichel.drone.DroneControl
-ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:36:9-39:59
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:38:9-41:59
 	android:label
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:38:13-65
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:40:13-65
 	android:theme
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:39:13-56
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:41:13-56
 	android:name
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:37:13-41
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:39:13-41
 activity#fr.thibaultpichel.drone.Client
-ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:40:9-44
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:42:9-44
 	android:name
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:40:19-41
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:42:19-41
 activity#fr.thibaultpichel.drone.Server
-ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:41:9-53
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:43:9-53
 	android:name
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml:41:19-41
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:43:19-41
 uses-sdk
-INJECTED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml
-INJECTED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml
-MERGED from [com.android.support:design:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/da1ff8b14022d6ee61842183241c49f2/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:design:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/da1ff8b14022d6ee61842183241c49f2/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b5373fb2c5b232a2ef5ca9a7fffd3b02/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b5373fb2c5b232a2ef5ca9a7fffd3b02/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/ff49a188269394368fe7e1dc71d9364d/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/ff49a188269394368fe7e1dc71d9364d/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/6b1227df706d78192fce8f56ca5c1974/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/6b1227df706d78192fce8f56ca5c1974/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/6ba69997ae14146f58b43d7c9fafa810/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/6ba69997ae14146f58b43d7c9fafa810/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/6704fdaea10390a974c61df9c2aff243/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/6704fdaea10390a974c61df9c2aff243/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/258cf4aa77a7bef2f31735ae6d05a2ba/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/258cf4aa77a7bef2f31735ae6d05a2ba/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/7941a75fb199bb99ac4789a4ce53b99a/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v4:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/7941a75fb199bb99ac4789a4ce53b99a/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-media-compat:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/27eab240c67372d11eb137e2731aec9e/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-media-compat:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/27eab240c67372d11eb137e2731aec9e/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-fragment:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/c4bcc3431a4ed5152ef597b351c0fa3d/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-fragment:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/c4bcc3431a4ed5152ef597b351c0fa3d/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-core-utils:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/efd6ca9711416435e333326f5ca7c991/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-utils:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/efd6ca9711416435e333326f5ca7c991/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-ui:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/35c964691d08eab56f1d8202721e65c8/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/35c964691d08eab56f1d8202721e65c8/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/30cdf9294da8ce28f88c2441f452bb42/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/30cdf9294da8ce28f88c2441f452bb42/AndroidManifest.xml:21:5-23:58
-MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/5694b19f1b8a9538ef9b34cb2a2c2f84/AndroidManifest.xml:20:5-22:41
-MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/5694b19f1b8a9538ef9b34cb2a2c2f84/AndroidManifest.xml:20:5-22:41
-INJECTED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml
-INJECTED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml
+INJECTED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml
+INJECTED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/9f1027b02d7a626477de457fbd2be105/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/9f1027b02d7a626477de457fbd2be105/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/fbd745574ee13c5d453d01312b3d036b/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/fbd745574ee13c5d453d01312b3d036b/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/2588a19738a53a1b7b511b5314ab9fb1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/2588a19738a53a1b7b511b5314ab9fb1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/ec9a0bb9b58e39a4d8573882c870458e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/ec9a0bb9b58e39a4d8573882c870458e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/5e420460874e6429a6befb7fbb901520/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/5e420460874e6429a6befb7fbb901520/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/507b09901546d77d183b4e75e5864012/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/507b09901546d77d183b4e75e5864012/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/0f8d19eb535e2478ef7077ad14274307/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/0f8d19eb535e2478ef7077ad14274307/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/117e8d8ae42e632ff7124e649dcedf4e/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/117e8d8ae42e632ff7124e649dcedf4e/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/82fd56cc0b29edfe8637384fc47e8b3d/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/82fd56cc0b29edfe8637384fc47e8b3d/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/04b391deabc223e42231f29b3475750c/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/04b391deabc223e42231f29b3475750c/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/a5406ea7685cc0fe3977261feacf62a1/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/a5406ea7685cc0fe3977261feacf62a1/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/c9cf6186fca1864c542a243f63aeac09/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/c9cf6186fca1864c542a243f63aeac09/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/817dbe1b3b9990ea6702f313827bf4dd/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/817dbe1b3b9990ea6702f313827bf4dd/AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/5fbefb4663b55023e0b0ba2818829b63/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/5fbefb4663b55023e0b0ba2818829b63/AndroidManifest.xml:20:5-22:41
+INJECTED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml
+INJECTED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/da1ff8b14022d6ee61842183241c49f2/AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/9f1027b02d7a626477de457fbd2be105/AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml
+		INJECTED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml
+		INJECTED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml
-		ADDED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/pitch/StudioProjects/modAppAndroid/app/src/main/AndroidManifest.xml
+		INJECTED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml
+		INJECTED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:design:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/da1ff8b14022d6ee61842183241c49f2/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b5373fb2c5b232a2ef5ca9a7fffd3b02/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b5373fb2c5b232a2ef5ca9a7fffd3b02/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/6b1227df706d78192fce8f56ca5c1974/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/6b1227df706d78192fce8f56ca5c1974/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/6ba69997ae14146f58b43d7c9fafa810/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/6ba69997ae14146f58b43d7c9fafa810/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/6704fdaea10390a974c61df9c2aff243/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/6704fdaea10390a974c61df9c2aff243/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:transition:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/258cf4aa77a7bef2f31735ae6d05a2ba/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:transition:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/258cf4aa77a7bef2f31735ae6d05a2ba/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-v4:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/7941a75fb199bb99ac4789a4ce53b99a/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-v4:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/7941a75fb199bb99ac4789a4ce53b99a/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-media-compat:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/27eab240c67372d11eb137e2731aec9e/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-media-compat:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/27eab240c67372d11eb137e2731aec9e/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-fragment:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/c4bcc3431a4ed5152ef597b351c0fa3d/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-fragment:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/c4bcc3431a4ed5152ef597b351c0fa3d/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/efd6ca9711416435e333326f5ca7c991/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/efd6ca9711416435e333326f5ca7c991/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-ui:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/35c964691d08eab56f1d8202721e65c8/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-ui:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/35c964691d08eab56f1d8202721e65c8/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-compat:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/30cdf9294da8ce28f88c2441f452bb42/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-compat:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/30cdf9294da8ce28f88c2441f452bb42/AndroidManifest.xml:26:9-28:38
+ADDED from [com.android.support:design:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/9f1027b02d7a626477de457fbd2be105/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/fbd745574ee13c5d453d01312b3d036b/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/fbd745574ee13c5d453d01312b3d036b/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/ec9a0bb9b58e39a4d8573882c870458e/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/ec9a0bb9b58e39a4d8573882c870458e/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/5e420460874e6429a6befb7fbb901520/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/5e420460874e6429a6befb7fbb901520/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/507b09901546d77d183b4e75e5864012/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/507b09901546d77d183b4e75e5864012/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/0f8d19eb535e2478ef7077ad14274307/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/0f8d19eb535e2478ef7077ad14274307/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/117e8d8ae42e632ff7124e649dcedf4e/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/117e8d8ae42e632ff7124e649dcedf4e/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/82fd56cc0b29edfe8637384fc47e8b3d/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/82fd56cc0b29edfe8637384fc47e8b3d/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/04b391deabc223e42231f29b3475750c/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/04b391deabc223e42231f29b3475750c/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/a5406ea7685cc0fe3977261feacf62a1/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/a5406ea7685cc0fe3977261feacf62a1/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/c9cf6186fca1864c542a243f63aeac09/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/c9cf6186fca1864c542a243f63aeac09/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/817dbe1b3b9990ea6702f313827bf4dd/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/817dbe1b3b9990ea6702f313827bf4dd/AndroidManifest.xml:26:9-28:38
 	android:value
-		ADDED from [com.android.support:design:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/da1ff8b14022d6ee61842183241c49f2/AndroidManifest.xml:28:13-35
+		ADDED from [com.android.support:design:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/9f1027b02d7a626477de457fbd2be105/AndroidManifest.xml:28:13-35
 	android:name
-		ADDED from [com.android.support:design:26.1.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/da1ff8b14022d6ee61842183241c49f2/AndroidManifest.xml:27:13-51
+		ADDED from [com.android.support:design:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/9f1027b02d7a626477de457fbd2be105/AndroidManifest.xml:27:13-51
 meta-data#android.arch.lifecycle.VERSION
-ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/5694b19f1b8a9538ef9b34cb2a2c2f84/AndroidManifest.xml:25:9-27:47
+ADDED from [android.arch.lifecycle:runtime:1.0.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/5fbefb4663b55023e0b0ba2818829b63/AndroidManifest.xml:25:9-27:47
 	android:value
-		ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/5694b19f1b8a9538ef9b34cb2a2c2f84/AndroidManifest.xml:27:13-44
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/5fbefb4663b55023e0b0ba2818829b63/AndroidManifest.xml:27:13-44
 	android:name
-		ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/pitch/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/5694b19f1b8a9538ef9b34cb2a2c2f84/AndroidManifest.xml:26:13-58
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/5fbefb4663b55023e0b0ba2818829b63/AndroidManifest.xml:26:13-58

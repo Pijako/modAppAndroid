@@ -43,7 +43,6 @@ public class UsbBroadcastReceiver extends BroadcastReceiver {
                     if (mAccessory != null) {
                         mFileDescriptor = usbMan.openAccessory(mAccessory);
                         fd = mFileDescriptor.getFileDescriptor();
-                        FileInputStream mInputStream = new FileInputStream(fd);
                         mOutputStream = new FileOutputStream(fd);
                     }
                 } else {
@@ -66,15 +65,12 @@ public class UsbBroadcastReceiver extends BroadcastReceiver {
 
     public void sendToAccessory(final String message) throws IOException {
 
-        Log.d("USB", "Writing data: " + message);
         if (mFileDescriptor != null) {
             new Thread(new Runnable() {
                 public void run() {
                     try
                     {
-                        Log.d("THREAD", " " + message);
                         Log.d("USB", "Writing data: " + message);
-                        Log.d("USB", "Done writing: " + message);
 
                         mOutputStream.write(message.getBytes());
                     }
