@@ -15,6 +15,7 @@ import android.util.Log;
 import android.widget.TextView;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Set;
 import java.util.UUID;
 
@@ -22,12 +23,14 @@ public class Server extends AppCompatActivity {
 
     public static final String ACTION_USB_PERMISSION = "com.android.example.USB_PERMISSION";
     private static final int REQUEST_ENABLE_BT = 1;
+    private final int INTERVAL_SEND = 1000;
     private final BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
     private Handler handler;
     private Set<BluetoothDevice> pairedDevices;
     private Intent enableBtIntent, discoverableIntent;
     private IntentFilter filter;
     private MyBluetoothService myBluetoothService;
+    private MesureThreadServer mesureThreadServer;
 
     // Create a BroadcastReceiver for ACTION_FOUND.
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
@@ -43,26 +46,45 @@ public class Server extends AppCompatActivity {
         }
     };
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_server);
         Log.d("Server", "Activité lancée");
 
+
+
         this.handler = new Handler() {
             @Override
             public void handleMessage(Message msg) {
+                String[] acceptedCommand = {"Up", "Down", "takeOff", "Forward", "Land", "Backward", "MovLeft", "MovRight", "TurnLeft",
+                                            "TurnRight", "Hover", "Adjust", "MovMag", "End", "Emergency"};
                 ((TextView) findViewById(R.id.textView8)).setText("Réception Commandes");
                 ((TextView) findViewById(R.id.textView7)).setText(msg.obj.toString());
-                if(!msg.equals("followme")){
+                if(Arrays.toString(acceptedCommand).contains(msg.obj.toString())){
                     sendByUsb(msg.obj.toString());
+                    Log.d("Server", "commande recu");
                 }
-                else{
-                    MyBluetoothService mesureServer = new MyBluetoothService(myBluetoothService.getSocket());
-                    mesureServer.startConnectedThread();
+                else if (msg.obj.toString().equals("followme")){
+                    Log.d("Server", "followme recu");
+                    //quand followme est envoyé
+                    //serveur fait du polling au client pour demander des infos regulierement
+                    mesureThreadServer = new MesureThreadServer(myBluetoothService.getSocket(), this);
+                    mesureThreadServer.startConnectedThread();
+
+                }
+                else { //quand la distance est recue
+                    Log.d("Server", "Distance reçue-->modif interface");
+                    ((TextView) findViewById(R.id.textView8)).setText("Following You");
+                    ((TextView) findViewById(R.id.textView7)).setText("Distance Client : "+msg.obj.toString()+" m");
+                    moveDrone(new Double(msg.obj.toString()));
                 }
             }
         };
+
+
 
         // On vérifie que le BT est supporté
         if (mBluetoothAdapter == null) {
@@ -101,9 +123,12 @@ public class Server extends AppCompatActivity {
                             protected void onPostExecute(MyBluetoothService mbs) {
                                 myBluetoothService = mbs;
                                 myBluetoothService.startConnectedThread();
+
                             }
                         };
                         connectServerTask.execute();
+
+
                     }
 
                 }
@@ -112,8 +137,14 @@ public class Server extends AppCompatActivity {
         }
     }
 
+    public void moveDrone(double d){
+
+
+
+    }
+
     public void sendByUsb(String msg) {
-        UsbBroadcastReceiver usbBroadcastReceiver = UsbBroadcastReceiver.getInstance();
+        UsbBroadcastReceiver usbBroadcastReceiver = UsbBroadcastReceiver.getInstance(UsbBroadcastReceiver.getUsbMan());
         Log.d("USB sending", msg);
         if (msg.equals("takeOff")) {
 
@@ -141,6 +172,7 @@ public class Server extends AppCompatActivity {
             }
 
         }
+
         try {
             usbBroadcastReceiver.sendToAccessory(msg);
         } catch (IOException e) {

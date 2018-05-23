@@ -4,6 +4,7 @@
 
     <uses-feature android:name="android.hardware.usb.accessory" />
 
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -38,7 +39,8 @@
             android:label="@string/title_activity_drone_control"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Client" />
-        <activity android:name=".Server"></activity>
+        <activity android:name=".Server">
+        </activity>
     </application>
 
 </manifest>

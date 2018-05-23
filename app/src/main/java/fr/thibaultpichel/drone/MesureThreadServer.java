@@ -20,13 +20,13 @@ public class MesureThreadServer {
     private Handler mHandler; // handler that gets info from Bluetooth service
     private BluetoothSocket socket;
     private ConnectedThread connectedThread;
-
     // Defines several constants used when transmitting messages between the
     // service and the UI.
 
-    public MesureThreadServer(BluetoothSocket socket){
+    public MesureThreadServer(BluetoothSocket socket, Handler h){
         this.socket = socket;
         this.connectedThread = new ConnectedThread(socket);
+        this.mHandler = h;
     }
 
     public BluetoothSocket getSocket() {
@@ -47,8 +47,12 @@ public class MesureThreadServer {
 
     public void sendCommand(String message){
         this.connectedThread.write(message);
-        Log.d("Client send Command", message);
+        Log.d("Serveur send Command", message);
 
+    }
+
+    public ConnectedThread getThread(){
+        return this.connectedThread;
     }
 
     private class ConnectedThread extends Thread {
@@ -58,6 +62,7 @@ public class MesureThreadServer {
         private byte[] mmBuffer; // mmBuffer store for the stream
         private BufferedReader reader;
         PrintWriter writer;
+        private final int INTERVAL_SEND = 500;
 
         public ConnectedThread(BluetoothSocket socket) {
             this.mmSocket = socket;
@@ -75,26 +80,42 @@ public class MesureThreadServer {
 
         }
 
+        //mesure periodique serveur
         public void run() {
             //mmBuffer = new byte[1024];
             //int numBytes; // bytes returned from read()
 
             // Keep listening to the InputStream until an exception occurs.
-            Log.d("Server - Run", "début attente message");
-            while (true) {
-                try {
 
-                    String receivedMessage = reader.readLine();
-                    Log.d("Server - Rcv Message", receivedMessage);
-                    Message msgForA = new Message();
-                    msgForA.obj = receivedMessage;
-                    MyBluetoothService.this.mHandler.sendMessage(msgForA);
+            //while(true){
+                //Si le currentTimeMillis est un multiple de 1000ms = 1s
+                //if(System.currentTimeMillis()%INTERVAL_SEND == 0) {
 
-                } catch (IOException e) {
-                    Log.d(TAG, "Input stream was disconnected", e);
-                    break;
-                }
-            }
+                    Log.d("Server - Run", "début envoi d'un message et puis attente la reponse du client");
+                    write("distance?");
+
+                    //attente d'une reponse du client
+                    while (true) {
+                        try {
+
+                            String receivedMessage = reader.readLine();
+                            //recevoir la reponse du client
+                            Log.d("Server - Rcv Message", receivedMessage);
+                            Message msgForA = new Message();
+                            msgForA.obj = receivedMessage;
+                            //message contenant la distance recu
+                            //lancement de l'algo pour suivre le client
+                            //MesureThreadServer.this.mHandler.sendMessage(msgForA);
+
+                        } catch (IOException e) {
+                            Log.d(TAG, "Input stream was disconnected", e);
+                            break;
+                        }
+                    }
+                        //envoi périodique
+                       // mHandler.postDelayed(this, INTERVAL_SEND);
+                //}
+            //}
         }
 
         // Call this from the main activity to send data to the remote device.

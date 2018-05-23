@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.android.support:animated-vector-drawable-26.1.0">
+    <CLASSES>
+      <root url="file:///mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/ec9a0bb9b58e39a4d8573882c870458e/res" />
+      <root url="jar:///mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/ec9a0bb9b58e39a4d8573882c870458e/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar:///mnt/nosave/tpichel/.gradle/caches/modules-2/files-2.1/com.android.support/animated-vector-drawable/26.1.0/91743e9b07667784f471a3c4748e6883cd810084/animated-vector-drawable-26.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

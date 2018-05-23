@@ -21,6 +21,10 @@ public class MyBluetoothService {
     private BluetoothSocket socket;
     private ConnectedThread connectedThread;
 
+    public Handler getHandler(){
+        return this.mHandler;
+    }
+
     // Defines several constants used when transmitting messages between the
     // service and the UI.
 
@@ -47,9 +51,11 @@ public class MyBluetoothService {
         // ... (Add other message types here as needed.)
     }
 
+    //lancer le thread ConnectedThread
     public void startConnectedThread(){
         this.connectedThread.start();
     }
+
 
     public void sendCommand(String message){
         this.connectedThread.write(message);
@@ -112,6 +118,7 @@ public class MyBluetoothService {
 
         public void cancel() {
             try {
+
                 mmSocket.close();
             } catch (IOException e) {
                 Log.e(TAG, "Could not close the connect socket", e);
