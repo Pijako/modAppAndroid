@@ -73,7 +73,7 @@ public class MesureThreadClient {
         private byte[] mmBuffer; // mmBuffer store for the stream
         private BufferedReader reader;
         PrintWriter writer;
-        private final int INTERVAL_SEND = 800;
+        private final int INTERVAL_SEND = 300;
 
         int rssi;
         double freqInMHz, exp, distance;
@@ -103,20 +103,15 @@ public class MesureThreadClient {
             // Keep listening to the InputStream until an exception occurs.
 
                     //attente d'une requete du serveur
-                    while (true) {
+                    //while (true) {
                         try {
                             Log.d("Client - Run", "début attente d'une commande du serveur puis envoi d'un message au serveur");
                             String receivedMessage = reader.readLine();
                             Log.d("Client - Rcv Message", receivedMessage);
                             Message msgForA = new Message();
                             msgForA.obj = receivedMessage;
-
-                            //this.mReceiver.onReceive();
                             //MesureThreadClient.this.mHandler.sendMessage(msgForA);
                             //Quand la demande de distance est recue par le client, on calcule la distance et puis l'envoie au serveur
-
-                            //String name = wifiInf.getSSID();
-                            // if(name.equals("unknown ssid")) //si pas de connection en wifi
                             WifiInfo wifiInf = wifiMan.getConnectionInfo();//Return dynamic information about the current Wi-Fi connection, if any is active.
 
                             if (receivedMessage.equals("distance?")){
@@ -132,14 +127,17 @@ public class MesureThreadClient {
                                     }
 
                                 }
-
+                                //envoyer la distance calculée au serveur
                                 write(""+distance);
+
                             }
                         } catch (IOException e) {
                             Log.d(TAG, "Input stream was disconnected", e);
-                            break;
+                            //break;
                         }
-                    }
+                         //Envoie
+                        //MesureThreadClient.this.mHandler.postDelayed(this, INTERVAL_SEND);
+                   // }
 
         }
 

@@ -32,7 +32,7 @@ public class UsbBroadcastReceiver extends BroadcastReceiver {
 
     public void onReceive(Context context, Intent intent) {
         String action = intent.getAction();
-         appContext = context;
+         this.appContext = context;
 
         if (action.equals(ACTION_USB_PERMISSION)) {
             //Le drone a accepte la connection USB
@@ -40,7 +40,9 @@ public class UsbBroadcastReceiver extends BroadcastReceiver {
                 UsbAccessory mAccessory = intent.getParcelableExtra(UsbManager.EXTRA_ACCESSORY);
                 //Je me souviens du socket
                 if (intent.getBooleanExtra(UsbManager.EXTRA_PERMISSION_GRANTED, false)) {
+                    Log.d("USB", "extra perimssion granted");
                     if (mAccessory != null) {
+                        Log.d("USB", "mAccessory OK non null");
                         mFileDescriptor = usbMan.openAccessory(mAccessory);
                         fd = mFileDescriptor.getFileDescriptor();
                         mOutputStream = new FileOutputStream(fd);
@@ -52,19 +54,20 @@ public class UsbBroadcastReceiver extends BroadcastReceiver {
         }
     }
 
-    public static UsbBroadcastReceiver getInstance() {
+    public static UsbBroadcastReceiver getInstance(UsbManager um) {
 
         //premiere fois on crée la class
         if (compteur == 0) {
             receiver = new UsbBroadcastReceiver();
             compteur++;
         }
+        usbMan= um;
 
         return receiver;
     }
 
     public void sendToAccessory(final String message) throws IOException {
-
+        Log.d("Server", "STA");
         if (mFileDescriptor != null) {
             new Thread(new Runnable() {
                 public void run() {
@@ -78,6 +81,9 @@ public class UsbBroadcastReceiver extends BroadcastReceiver {
                             (IOException e) {e.printStackTrace();}
                 }
             }).start();
+        }
+        else{
+            Log.d("Pb USB", "FD = null");
         }
     }
 

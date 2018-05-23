@@ -44,19 +44,19 @@ ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/Andro
 	android:name
 		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:7:22-73
 uses-permission#android.permission.BLUETOOTH
-ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:9:5-68
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:8:5-68
 	android:name
-		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:9:22-65
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:8:22-65
 uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:10:5-74
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:9:5-74
 	android:name
-		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:10:22-71
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:9:22-71
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:11:5-81
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:10:5-81
 	android:name
-		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:11:22-78
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:10:22-78
 application
-ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:14:5-44:19
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:13:5-44:19
 MERGED from [com.android.support:design:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/9f1027b02d7a626477de457fbd2be105/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:design:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/9f1027b02d7a626477de457fbd2be105/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/fbd745574ee13c5d453d01312b3d036b/AndroidManifest.xml:25:5-29:19
@@ -86,63 +86,63 @@ MERGED from [com.android.support:support-compat:26.1.0] /mnt/nosave/tpichel/.gra
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/5fbefb4663b55023e0b0ba2818829b63/AndroidManifest.xml:24:5-28:19
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/5fbefb4663b55023e0b0ba2818829b63/AndroidManifest.xml:24:5-28:19
 	android:supportsRtl
-		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:19:9-35
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:18:9-35
 	android:label
-		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:17:9-41
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:16:9-41
 	android:roundIcon
-		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:18:9-54
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:17:9-54
 	android:icon
-		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:16:9-43
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:15:9-43
 	android:allowBackup
-		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:15:9-35
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:14:9-35
 	android:theme
-		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:20:9-40
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:19:9-40
 activity#fr.thibaultpichel.drone.DroneConnection
-ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:21:9-37:20
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:20:9-36:20
 	android:label
-		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:23:13-45
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:22:13-45
 	android:theme
-		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:24:13-56
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:23:13-56
 	android:name
-		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:22:13-44
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:21:13-44
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:25:13-29:29
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:24:13-28:29
 action#android.intent.action.MAIN
-ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:26:17-69
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:25:17-69
 	android:name
-		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:26:25-66
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:25:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:28:17-77
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:27:17-77
 	android:name
-		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:28:27-74
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:27:27-74
 intent-filter#action:name:android.hardware.usb.action.USB_ACCESSORY_ATTACHED
-ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:30:13-32:29
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:29:13-31:29
 action#android.hardware.usb.action.USB_ACCESSORY_ATTACHED
-ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:31:17-93
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:30:17-93
 	android:name
-		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:31:25-90
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:30:25-90
 meta-data#android.hardware.usb.action.USB_ACCESSORY_ATTACHED
-ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:34:13-36:60
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:33:13-35:60
 	android:resource
-		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:36:17-57
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:35:17-57
 	android:name
-		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:35:17-82
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:34:17-82
 activity#fr.thibaultpichel.drone.DroneControl
-ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:38:9-41:59
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:37:9-40:59
 	android:label
-		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:40:13-65
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:39:13-65
 	android:theme
-		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:41:13-56
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:40:13-56
 	android:name
-		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:39:13-41
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:38:13-41
 activity#fr.thibaultpichel.drone.Client
-ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:42:9-44
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:41:9-44
+	android:name
+		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:41:19-41
+activity#fr.thibaultpichel.drone.Server
+ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:42:9-43:20
 	android:name
 		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:42:19-41
-activity#fr.thibaultpichel.drone.Server
-ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:43:9-53
-	android:name
-		ADDED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml:43:19-41
 uses-sdk
 INJECTED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/tpichel/AndroidStudioProjects/modAppAndroid /app/src/main/AndroidManifest.xml

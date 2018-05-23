@@ -23,9 +23,9 @@ public class Server extends AppCompatActivity {
 
     public static final String ACTION_USB_PERMISSION = "com.android.example.USB_PERMISSION";
     private static final int REQUEST_ENABLE_BT = 1;
-    private final int INTERVAL_SEND = 500;
+    private final int INTERVAL_SEND = 1000;
     private final BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-    private Handler handler, handler_mesure;
+    private Handler handler;
     private Set<BluetoothDevice> pairedDevices;
     private Intent enableBtIntent, discoverableIntent;
     private IntentFilter filter;
@@ -54,6 +54,8 @@ public class Server extends AppCompatActivity {
         setContentView(R.layout.activity_server);
         Log.d("Server", "Activité lancée");
 
+
+
         this.handler = new Handler() {
             @Override
             public void handleMessage(Message msg) {
@@ -63,15 +65,15 @@ public class Server extends AppCompatActivity {
                 ((TextView) findViewById(R.id.textView7)).setText(msg.obj.toString());
                 if(Arrays.toString(acceptedCommand).contains(msg.obj.toString())){
                     sendByUsb(msg.obj.toString());
-                    Log.d("Server", "Pas followme");
+                    Log.d("Server", "commande recu");
                 }
                 else if (msg.obj.toString().equals("followme")){
-                    Log.d("Server", "Cas followme");
+                    Log.d("Server", "followme recu");
                     //quand followme est envoyé
                     //serveur fait du polling au client pour demander des infos regulierement
                     mesureThreadServer = new MesureThreadServer(myBluetoothService.getSocket(), this);
                     mesureThreadServer.startConnectedThread();
-                    //handler_mesure.postDelayed(mesureThreadServer.getThread(), INTERVAL_SEND);
+
                 }
                 else { //quand la distance est recue
                     Log.d("Server", "Distance reçue-->modif interface");
@@ -142,7 +144,7 @@ public class Server extends AppCompatActivity {
     }
 
     public void sendByUsb(String msg) {
-        UsbBroadcastReceiver usbBroadcastReceiver = UsbBroadcastReceiver.getInstance();
+        UsbBroadcastReceiver usbBroadcastReceiver = UsbBroadcastReceiver.getInstance(UsbBroadcastReceiver.getUsbMan());
         Log.d("USB sending", msg);
         if (msg.equals("takeOff")) {
 

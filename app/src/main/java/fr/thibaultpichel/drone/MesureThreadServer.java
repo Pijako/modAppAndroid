@@ -62,6 +62,7 @@ public class MesureThreadServer {
         private byte[] mmBuffer; // mmBuffer store for the stream
         private BufferedReader reader;
         PrintWriter writer;
+        private final int INTERVAL_SEND = 500;
 
         public ConnectedThread(BluetoothSocket socket) {
             this.mmSocket = socket;
@@ -89,8 +90,6 @@ public class MesureThreadServer {
             //while(true){
                 //Si le currentTimeMillis est un multiple de 1000ms = 1s
                 //if(System.currentTimeMillis()%INTERVAL_SEND == 0) {
-                    Log.d("Server", "envoie demande de la distance in loop");
-
 
                     Log.d("Server - Run", "début envoi d'un message et puis attente la reponse du client");
                     write("distance?");
@@ -106,13 +105,15 @@ public class MesureThreadServer {
                             msgForA.obj = receivedMessage;
                             //message contenant la distance recu
                             //lancement de l'algo pour suivre le client
-                            MesureThreadServer.this.mHandler.sendMessage(msgForA);
+                            //MesureThreadServer.this.mHandler.sendMessage(msgForA);
 
                         } catch (IOException e) {
                             Log.d(TAG, "Input stream was disconnected", e);
                             break;
                         }
                     }
+                        //envoi périodique
+                       // mHandler.postDelayed(this, INTERVAL_SEND);
                 //}
             //}
         }

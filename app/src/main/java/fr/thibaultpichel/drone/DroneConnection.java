@@ -18,6 +18,7 @@ import android.widget.Toast;
 public class DroneConnection extends AppCompatActivity implements View.OnClickListener {
 
     public static final String ACTION_USB_PERMISSION = "com.android.example.USB_PERMISSION";
+    private  UsbManager usbMan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +45,28 @@ public class DroneConnection extends AppCompatActivity implements View.OnClickLi
                 break;
 
             case R.id.button_connect_server:
-                playIntent = new Intent(this, Server.class);
-                startActivity(playIntent);
+
+                //Dans la reaction au bouton
+                PendingIntent mPermissionIntent =
+                        PendingIntent.getBroadcast(this, 0, new Intent(ACTION_USB_PERMISSION), 0);
+                IntentFilter filter = new IntentFilter(ACTION_USB_PERMISSION);
+                this.usbMan = (UsbManager) getSystemService(Context.USB_SERVICE);
+                //Creation du service qui intercepte la réponse de l’accessoire
+                Intent receiverIntent = registerReceiver(UsbBroadcastReceiver.getInstance(usbMan), filter);
+                UsbAccessory[] accessoryList = usbMan.getAccessoryList();
+                if (accessoryList == null) {
+                //Pas d’accessoire USB connecté
+                    Toast.makeText(this.getApplicationContext(), "No connected drone", Toast.LENGTH_LONG).show();
+                   /* playIntent = new Intent(this, Server.class);
+                    startActivity(playIntent);*/
+                }
+                else {
+                //On demande la connection
+                    usbMan.requestPermission(accessoryList[0], mPermissionIntent);
+                    Toast.makeText(this.getApplicationContext(), "Drone found", Toast.LENGTH_LONG).show();
+                    playIntent = new Intent(this, Server.class);
+                    startActivity(playIntent);
+                }
                 break;
         }
     }

@@ -32,7 +32,7 @@ public class Client extends AppCompatActivity {
     private MyBluetoothService myBluetoothService;
     private MesureThreadClient mesureThreadClient;
     private BluetoothSocket mmSocket;
-    private final int INTERVAL_SEND = 300;
+    private final int INTERVAL_SEND = 900;
     private Context context;
     private WifiManager wifiMan;
 
@@ -111,13 +111,13 @@ public class Client extends AppCompatActivity {
             Log.d("Client", "listening for request");
             this.mmSocket = this.myBluetoothService.getSocket();
 
-            mesureThreadClient = new MesureThreadClient(this.mmSocket, wifiMan);
+            this.mesureThreadClient = new MesureThreadClient(this.mmSocket, wifiMan);
 
 
             Log.d("Client", "listening for request in loop");
             this.mesureThreadClient.startConnectedThread();
 
-            //this.periodHandler.postDelayed(mesureThreadClient.getThread(), INTERVAL_SEND);
+
 
         }
         else {
