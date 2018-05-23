@@ -15,6 +15,7 @@ import android.util.Log;
 import android.widget.TextView;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Set;
 import java.util.UUID;
 
@@ -53,22 +54,14 @@ public class Server extends AppCompatActivity {
         setContentView(R.layout.activity_server);
         Log.d("Server", "Activité lancée");
 
-        this.handler_mesure = new Handler() {
-            @Override
-            public void handleMessage(Message msg) {
-                Log.d("Server", "Distance reçue-->modif interface");
-                ((TextView) findViewById(R.id.textView8)).setText("Following You");
-                ((TextView) findViewById(R.id.textView7)).setText("Distance Client : " + msg.obj.toString() + " m");
-                moveDrone(new Double(msg.obj.toString()));
-            }
-        };
-
         this.handler = new Handler() {
             @Override
             public void handleMessage(Message msg) {
+                String[] acceptedCommand = {"Up", "Down", "takeOff", "Forward", "Land", "Backward", "MovLeft", "MovRight", "TurnLeft",
+                                            "TurnRight", "Hover", "Adjust", "MovMag", "End", "Emergency"};
                 ((TextView) findViewById(R.id.textView8)).setText("Réception Commandes");
                 ((TextView) findViewById(R.id.textView7)).setText(msg.obj.toString());
-                if(!msg.obj.toString().equals("followme")){
+                if(Arrays.toString(acceptedCommand).contains(msg.obj.toString())){
                     sendByUsb(msg.obj.toString());
                     Log.d("Server", "Pas followme");
                 }
@@ -76,18 +69,16 @@ public class Server extends AppCompatActivity {
                     Log.d("Server", "Cas followme");
                     //quand followme est envoyé
                     //serveur fait du polling au client pour demander des infos regulierement
-                    mesureThreadServer = new MesureThreadServer(myBluetoothService.getSocket(), handler_mesure);
+                    mesureThreadServer = new MesureThreadServer(myBluetoothService.getSocket(), this);
                     mesureThreadServer.startConnectedThread();
-
                     //handler_mesure.postDelayed(mesureThreadServer.getThread(), INTERVAL_SEND);
-
                 }
-                /*else { //quand la distance est recue
+                else { //quand la distance est recue
                     Log.d("Server", "Distance reçue-->modif interface");
                     ((TextView) findViewById(R.id.textView8)).setText("Following You");
                     ((TextView) findViewById(R.id.textView7)).setText("Distance Client : "+msg.obj.toString()+" m");
                     moveDrone(new Double(msg.obj.toString()));
-                }*/
+                }
             }
         };
 

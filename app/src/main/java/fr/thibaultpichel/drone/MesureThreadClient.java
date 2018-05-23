@@ -115,18 +115,16 @@ public class MesureThreadClient {
                             //MesureThreadClient.this.mHandler.sendMessage(msgForA);
                             //Quand la demande de distance est recue par le client, on calcule la distance et puis l'envoie au serveur
 
-
-                            // WifiInfo wifiInf = wm.getConnectionInfo();//Return dynamic information about the current Wi-Fi connection, if any is active.
-
                             //String name = wifiInf.getSSID();
                             // if(name.equals("unknown ssid")) //si pas de connection en wifi
+                            WifiInfo wifiInf = wifiMan.getConnectionInfo();//Return dynamic information about the current Wi-Fi connection, if any is active.
 
                             if (receivedMessage.equals("distance?")){
                                 for(ScanResult result : wifiMan.getScanResults()) {
 
                                     if(result.SSID.equals("AndroidRemote")) { //si cest le wifi de notre drone
 
-                                        rssi = result.level; //la puissance
+                                        rssi = wifiInf.getRssi(); //la puissance
                                         freqInMHz = result.frequency; //la puissance
                                         exp = (27.55 - (20 * Math.log10(freqInMHz)) + Math.abs(rssi)) / 20.0;
                                         distance = Math.pow(10.0, exp);
