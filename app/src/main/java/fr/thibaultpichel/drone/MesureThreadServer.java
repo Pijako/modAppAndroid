@@ -12,7 +12,13 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 
 /**
- * Created by tpichel on 18/05/18.
+ * Created by tpichel & jessking on 18/05/18. Sur le modèle de MyBluetoothService
+ *
+ * Classe qui permet d'écrire et de lire dans le socket Bluetooth d'échange de messages
+ * via un thread lancé sur chaque téléphone.
+ * Le thread est manipulé par l'intermédiaire de cette classe.
+ *
+ * Elle est différente côté client et côté serveur.
  */
 
 public class MesureThreadServer {
@@ -31,14 +37,6 @@ public class MesureThreadServer {
 
     public BluetoothSocket getSocket() {
         return socket;
-    }
-
-    private interface MessageConstants {
-        public static final int MESSAGE_READ = 0;
-        public static final int MESSAGE_WRITE = 1;
-        public static final int MESSAGE_TOAST = 2;
-
-        // ... (Add other message types here as needed.)
     }
 
     public void startConnectedThread(){
@@ -80,7 +78,7 @@ public class MesureThreadServer {
 
         }
 
-        //mesure periodique serveur
+        //Méthode run() (runnable) propre à la mesure période côté server
         public void run() {
             //mmBuffer = new byte[1024];
             //int numBytes; // bytes returned from read()

@@ -13,7 +13,8 @@ import java.util.UUID;
 import static android.content.ContentValues.TAG;
 
 /**
- * Created by tpichel on 16/05/18.
+ * Created by tpichel & jessking on 18/05/18.
+ * Classe Task héritant de AsyncTask
  */
 
 public class ConnectServerTask extends AsyncTask<Void, Void, MyBluetoothService> {
@@ -66,15 +67,24 @@ public class ConnectServerTask extends AsyncTask<Void, Void, MyBluetoothService>
                 break;
             }
         }
+        /*Ici, éventuelle utilisation de manageMyConnectedSocket() pour tester la connexion
+         *
+         * Puis, on retourne un objet de type MyBluetoothService créé grâce au socket de connexion
+         * ainsi qu'un handler fourni et contenant le thread qui permettra au client d'échanger des
+         * messages avec le serveur
+         */
         return new MyBluetoothService(socket, this.handler);
     }
 
+    //Fonction pour gérer la connexion
     private void manageMyConnectedSocket(BluetoothSocket socket) {
         //Lire ou écrire des messages pour tester la connexion
 
     }
 
-    // Closes the connect socket and causes the thread to finish.
+    /* Fonction pour fermer le socket client et terminer le thread.
+    *  (Inutilisée, l'AsyncTask se termine seule)
+    */
     public void cancel() {
         try {
             mmServerSocket.close();

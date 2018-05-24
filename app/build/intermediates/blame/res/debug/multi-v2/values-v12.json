@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/tpichel/AndroidStudioProjects/modAppAndroid /app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v12/values-v12.xml",
+            "outputFile": "/Users/pitch/StudioProjects/modAppAndroid/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v12/values-v12.xml",
             "map": [
                 {
-                    "source": "/mnt/nosave/tpichel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/fbd745574ee13c5d453d01312b3d036b/res/values-v12/values-v12.xml",
+                    "source": "/Users/pitch/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b5373fb2c5b232a2ef5ca9a7fffd3b02/res/values-v12/values-v12.xml",
                     "from": {
                         "startLines": "2,5,8,9",
                         "startColumns": "4,4,4,4",

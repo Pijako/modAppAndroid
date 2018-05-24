@@ -17,7 +17,9 @@ import java.io.IOException;
 import static fr.thibaultpichel.drone.DroneConnection.ACTION_USB_PERMISSION;
 
 /**
- * Created by tpichel on 14/05/18.
+ * Created by tpichel & jessking on 14/05/18.
+ * Classe qui hérite de BroadcastRceiver, et qui permet d'utiliser la connexion USB
+ * pour injecter les commandes au drone.
  */
 
 public class UsbBroadcastReceiver extends BroadcastReceiver {
@@ -35,10 +37,11 @@ public class UsbBroadcastReceiver extends BroadcastReceiver {
          this.appContext = context;
 
         if (action.equals(ACTION_USB_PERMISSION)) {
-            //Le drone a accepte la connection USB
+            //Le drone a accepte la connexion USB
             synchronized (this) {
                 UsbAccessory mAccessory = intent.getParcelableExtra(UsbManager.EXTRA_ACCESSORY);
-                //Je me souviens du socket
+
+                //Se souvient de l'accessory
                 if (intent.getBooleanExtra(UsbManager.EXTRA_PERMISSION_GRANTED, false)) {
                     Log.d("USB", "extra perimssion granted");
                     if (mAccessory != null) {
@@ -47,6 +50,7 @@ public class UsbBroadcastReceiver extends BroadcastReceiver {
                         fd = mFileDescriptor.getFileDescriptor();
                         mOutputStream = new FileOutputStream(fd);
                     }
+                    //Sinon
                 } else {
                     Log.d("USB onReceive", "permission denied for accessory " + mAccessory);
                 }
@@ -54,6 +58,7 @@ public class UsbBroadcastReceiver extends BroadcastReceiver {
         }
     }
 
+    //Récupération d'une instance de classe nécessaire lors de l'appel de méthodes
     public static UsbBroadcastReceiver getInstance(UsbManager um) {
 
         //premiere fois on crée la class
@@ -61,11 +66,12 @@ public class UsbBroadcastReceiver extends BroadcastReceiver {
             receiver = new UsbBroadcastReceiver();
             compteur++;
         }
-        usbMan= um;
+        usbMan = um;
 
         return receiver;
     }
 
+    //Envoie de la commande
     public void sendToAccessory(final String message) throws IOException {
         Log.d("Server", "STA");
         if (mFileDescriptor != null) {

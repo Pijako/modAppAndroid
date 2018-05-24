@@ -12,7 +12,11 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 
 /**
- * Created by tpichel on 18/05/18.
+ * Created by tpichel & jessking on 18/05/18.
+ * Classe qui permet d'écrire et de lire dans le socket Bluetooth d'échange de messages
+ * via un thread lancé sur chaque téléphone.
+ * Le thread est manipulé par l'intermédiaire de cette classe.
+ * Elle est identique côté client et côté serveur.
  */
 
 public class MyBluetoothService {
@@ -21,6 +25,7 @@ public class MyBluetoothService {
     private BluetoothSocket socket;
     private ConnectedThread connectedThread;
 
+    //Méthode retournant le handler (Non utilisée)
     public Handler getHandler(){
         return this.mHandler;
     }
@@ -28,41 +33,39 @@ public class MyBluetoothService {
     // Defines several constants used when transmitting messages between the
     // service and the UI.
 
+    //Méthode constructeur 1
     public MyBluetoothService(BluetoothSocket socket, Handler h){
         this.socket = socket;
         this.connectedThread = new ConnectedThread(socket);
         this.mHandler = h;
     }
 
+    //Méthode constructeur 2 (Inutilisée) Aurait-pu l'être car côté client aucun handler utilisé
     public MyBluetoothService(BluetoothSocket socket){
         this.socket = socket;
         this.connectedThread = new ConnectedThread(socket);
     }
 
+    //Méthode retournant le socket utilisé lors des échanges
     public BluetoothSocket getSocket() {
         return socket;
     }
 
-    private interface MessageConstants {
-        public static final int MESSAGE_READ = 0;
-        public static final int MESSAGE_WRITE = 1;
-        public static final int MESSAGE_TOAST = 2;
-
-        // ... (Add other message types here as needed.)
-    }
-
-    //lancer le thread ConnectedThread
+    /*Méthode lançant le thread privé (runnable) inaccessible depuis l'extérieur car déclaré privé
+    * et dans la classe MyBluetoothService
+    */
     public void startConnectedThread(){
         this.connectedThread.start();
     }
 
-
+    //Méthode qui lance une commande String en appelant la méthode write contenue dans le thread
     public void sendCommand(String message){
         this.connectedThread.write(message);
         Log.d("Client send Command", message);
 
     }
 
+    //Classe privée thread de connexion héritant de thread à l'intérieur du service
     private class ConnectedThread extends Thread {
         private final BluetoothSocket mmSocket;
         private InputStream mmInStream = null;
@@ -70,7 +73,11 @@ public class MyBluetoothService {
         private byte[] mmBuffer; // mmBuffer store for the stream
         private BufferedReader reader;
         PrintWriter writer;
+        /*Objet de type BufferedReader & Printwriter, plus simples à utiliser car n'utilisent
+        * que des Strings et non des bytes.
+        */
 
+        //Méthode constructeur
         public ConnectedThread(BluetoothSocket socket) {
             this.mmSocket = socket;
 
@@ -101,6 +108,7 @@ public class MyBluetoothService {
                     //On l'envoie à l'activité Server via le Handler
                     Message msgForA = new Message();
                     msgForA.obj = receivedMessage;
+
                     MyBluetoothService.this.mHandler.sendMessage(msgForA);
 
                 } catch (IOException e) {

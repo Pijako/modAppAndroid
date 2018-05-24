@@ -8,11 +8,11 @@ import android.os.Handler;
 import android.util.Log;
 import java.io.IOException;
 import java.util.UUID;
-
 import static android.content.ContentValues.TAG;
 
 /**
- * Created by tpichel on 18/05/18.
+ * Created by tpichel & jessking on 18/05/18.
+ * Classe Task héritant de AsyncTask
  */
 
 public class ConnectClientTask extends AsyncTask<Void, Void, MyBluetoothService> {
@@ -53,9 +53,8 @@ public class ConnectClientTask extends AsyncTask<Void, Void, MyBluetoothService>
             mmSocket.connect();
 
 
-
         } catch (IOException connectException) {
-            // Unable to connect; close the socket and return.
+            // Connexion impossible, on ferme le socket
             try {
                 mmSocket.close();
             } catch (IOException closeException) {
@@ -64,23 +63,30 @@ public class ConnectClientTask extends AsyncTask<Void, Void, MyBluetoothService>
             return null;
         }
 
-        //Éventuelle utilisation de manageMyConnectedSocket() pour tester la connexion
-
+        /*Ici, éventuelle utilisation de manageMyConnectedSocket() pour tester la connexion
+        *
+        * Puis, on retourne un objet de type MyBluetoothService créé grâce au socket de connexion
+        * ainsi qu'un handler fourni et contenant le thread qui permettra au client d'échanger des
+        * messages avec le serveur
+        */
         return new MyBluetoothService(mmSocket, this.handler);
 
     }
 
+    //Fonction pour retourner le socket de connexion (non utilisée ici)
     public BluetoothSocket getSocket() {
-
             return this.mmSocket;
 
     }
 
+    //Fonction pour gérer la connexion
     private void manageMyConnectedSocket(BluetoothSocket socket) {
         //Lire ou écrire des messages pour tester la connexion
     }
 
-    // Closes the client socket and causes the thread to finish.
+    /* Fonction pour fermer le socket client et terminer le thread.
+     (Inutilisée, l'AsyncTask se termine seule)
+    */
     public void cancel() {
         try {
             mmSocket.close();
